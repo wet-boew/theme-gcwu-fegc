@@ -1,0 +1,20 @@
+{
+  "name": "theme-gcwu-fegc",
+  "version": "0.0.0",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "bower.json",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+	 "wet-boew": "git://github.com/wet-boew/wet-boew.git#v4.0"
+  },
+  "resolutions": {
+    "jquery": ">= 1.9.0"
+  }
+}
+
