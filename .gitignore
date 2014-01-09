@@ -1,0 +1,26 @@
+dist/*
+lib/*
+node_modules/*
+*.orig
+*.tmp
+*.log
+.sass-cache/
+jshint.out.xml
+csslint.out.xml
+
+
+# OS generated files #
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ethumbs.db
+Thumbs.db
+_notes/
+
+# Project files
+/.project
+.c9revisions/*
+*.sublime-project
+*.sublime-workspace
