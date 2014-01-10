@@ -7,3 +7,28 @@
 /*
   @title: Small view and under (screen only)
  */
+#gcwu-sig {
+	display: none;
+}
+
+#wmms {
+	position: absolute;
+	left: 0;
+	top: -2em;
+}
+
+#wb-bnr {
+	background-image: linear-gradient(#4474AD, #174F88);
+}
+
+#wb-sttl {
+	position: relative;
+	a {
+		font-size: 1.5em;
+		text-shadow: 0 1px 1px #044062;
+	}
+}
+
+#wb-glb-mn a {
+	color: #FFF;
+}

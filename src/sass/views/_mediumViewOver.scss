@@ -7,3 +7,121 @@
 /*
   @title: Medium view and over (screen only)
  */
+%page-background {
+	background-color:#FFF;
+}
+
+%submenu-colors {
+	background-color: #CCC;
+	color: #000;
+}
+
+%search-controls-overrides {
+	border-radius: 2px;
+	height: 26px;
+}
+
+%brand-height {
+	height: 33px;
+}
+
+body {
+	background: {
+		image: url(../assets/header-leaf.jpg), url(../assets/header-bg.jpg);
+		repeat: no-repeat, repeat-x;
+		position: center 2.58em;
+	}
+}
+
+#gcwu-sig {
+	display: block;
+}
+
+#wmms {
+	@extend %brand-height;
+	float: right;
+}
+
+#wb-sttl {
+	@extend %brand-height;
+	margin-top: 40px;
+	margin-bottom: 5px;
+	a {
+		position: absolute; //Required to allow multiline site titles
+		font-size: 1.9em;
+		text-shadow: 1px 1px 1px #333;
+	}
+}
+
+#wb-srch {
+	float: right;
+	background: #146094;
+	border-left: 1px solid #15527D;
+	border-right: 1px solid #15527D;
+	border-top: 1px solid #87AEC9;
+	padding: 11px 10px 6px 12px;
+
+	input {
+		@extend %search-controls-overrides;
+		padding: 2px 0;
+	}
+
+	.btn {
+		@extend %search-controls-overrides;
+		background-image: linear-gradient(#F0F0F0, #CCCCCC);
+		padding: 2px 6px;
+	}
+}
+
+main {
+	@extend %page-background;
+}
+
+#wb-info {
+	@extend %page-background;
+}
+
+#wb-sm {
+	margin-top: -1px;
+	.nvbar {
+		background: linear-gradient(#146094, #23447E) #23447E ;
+		border-top: 1px solid #87AEC9;
+		border-bottom: 4px solid #CCCCCC;
+
+		ul.menu {
+			margin-bottom: 0;
+			& > li {
+				padding: 0;
+				border-left: 1px solid #124B79;
+				border-right: 1px solid #15598F;
+			}
+		}
+
+		
+	}
+	
+	a {
+		display: block;
+		color: #FFF;
+		font-weight: 700;
+		font-size: 90%;
+		text-decoration: none;
+		padding: 0.48em 1.17em 0.48em 0.79em;
+
+		&:hover, &:active {
+			@extend %submenu-colors;
+		}
+	}
+
+	.sm {
+		@extend %submenu-colors;
+		border-bottom: 4px solid #0F315B;
+    	box-shadow: 0 5px 5px -4px rgba(0, 0, 0, 0.5), 5px 5px 5px -4px rgba(0, 0, 0, 0.5), -5px 5px 5px -4px rgba(0, 0, 0, 0.5);
+    	border-radius: 0 0 3px 3px;
+
+    	a {
+    		@extend %submenu-colors;
+    		font-weight: 400;
+    	}
+	}
+}
