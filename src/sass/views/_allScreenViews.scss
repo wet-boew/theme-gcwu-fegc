@@ -7,3 +7,28 @@
 /*
   @title: All screen views
  */
+
+%fip-height {
+	height: 22px;
+}
+
+#wb-bar {
+	background: #000;
+	min-height: 2.6em;
+}
+
+#gcwu-sig {
+	@extend %fip-height;
+	margin: 10px 0;
+}
+
+#wmms {
+	@extend %fip-height;
+}
+
+#wb-sttl {
+	a {
+		color: #FFFFFF !important;
+		text-decoration: none;
+	}
+}

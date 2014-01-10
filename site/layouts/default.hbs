@@ -36,12 +36,7 @@
 				<div id="wb-bar">
 					<div class="container">
 						<div class="row">
-{{#isnt languagetoggle "false"}}
-							<section id="wb-lng" class="visible-md visible-lg">
-								<h2>{{#i18n "tmpl-lang-select"}}{{/i18n}}</h2>
-								{{>languagetoggle}}
-							</section>
-{{/isnt}}
+							{{>headerbar}}
 {{#isnt mobimenu "false"}}
 							<section class="wb-mb-links col-xs-12 visible-sm visible-xs" id="wb-glb-mn">
 								<h2>{{#i18n "menu"}}{{/i18n}}</h2>
@@ -55,11 +50,11 @@
 				<div class="container">
 					<div class="row">
 
-						<div id="wb-sttl" class="col-md-8">
+						<div id="wb-sttl">
 							{{>brand}}
 						</div>
 {{#isnt sitesearch "false"}}
-						<section id="wb-srch" class="col-md-4 visible-md visible-lg">
+						<section id="wb-srch" class="visible-md visible-lg">
 							<h2>{{#i18n "tmpl-search"}}{{/i18n}}</h2>
 							{{>sitesearch}}
 						</section>
