@@ -79,12 +79,17 @@ main {
 
 #wb-info {
 	@extend %page-background;
+	background: url(../assets/sft-deco.gif) repeat-x scroll center top #EFEFEF;
+
+	.container {
+		background: transparent url(../assets/sft-deco-leaf.gif) no-repeat top center;
+	}
 }
 
 #wb-sm {
 	margin-top: -1px;
 	.nvbar {
-		background: linear-gradient(#146094, #23447E) #23447E ;
+		background: linear-gradient(#146094, #23447E) #23447E;
 		border-top: 1px solid #87AEC9;
 		border-bottom: 4px solid #CCCCCC;
 
