@@ -25,6 +25,16 @@
 	height: 33px;
 }
 
+// TODO: Implement when libsass gets better placeholder support
+// %navigation-links {
+//	a {
+//		&:link {
+//			text-decoration: none;
+//		}
+//	}
+//}
+//
+
 body {
 	background: {
 		image: url(../assets/header-leaf.jpg), url(../assets/header-bg.jpg);
@@ -73,19 +83,6 @@ body {
 	}
 }
 
-main {
-	@extend %page-background;
-}
-
-#wb-info {
-	@extend %page-background;
-	background: url(../assets/sft-deco.gif) repeat-x scroll center top #EFEFEF;
-
-	.container {
-		background: transparent url(../assets/sft-deco-leaf.gif) no-repeat top center;
-	}
-}
-
 #wb-sm {
 	margin-top: -1px;
 	.nvbar {
@@ -93,12 +90,15 @@ main {
 		border-top: 1px solid #87AEC9;
 		border-bottom: 4px solid #CCCCCC;
 
-		ul.menu {
-			margin-bottom: 0;
-			& > li {
-				padding: 0;
-				border-left: 1px solid #124B79;
-				border-right: 1px solid #15598F;
+		ul
+		 {
+			&.menu {
+				margin-bottom: 0;
+				& > li {
+					padding: 0;
+					border-left: 1px solid #124B79;
+					border-right: 1px solid #15598F;
+				}
 			}
 		}
 
@@ -110,8 +110,8 @@ main {
 		color: #FFF;
 		font-weight: 700;
 		font-size: 90%;
-		text-decoration: none;
 		padding: 0.48em 1.17em 0.48em 0.79em;
+		text-decoration: none;
 
 		&:hover, &:active {
 			@extend %submenu-colors;
@@ -121,12 +121,112 @@ main {
 	.sm {
 		@extend %submenu-colors;
 		border-bottom: 4px solid #0F315B;
-    	box-shadow: 0 5px 5px -4px rgba(0, 0, 0, 0.5), 5px 5px 5px -4px rgba(0, 0, 0, 0.5), -5px 5px 5px -4px rgba(0, 0, 0, 0.5);
-    	border-radius: 0 0 3px 3px;
+		box-shadow: 0 5px 5px -4px rgba(0, 0, 0, 0.5), 5px 5px 5px -4px rgba(0, 0, 0, 0.5), -5px 5px 5px -4px rgba(0, 0, 0, 0.5);
+		border-radius: 0 0 3px 3px;
 
-    	a {
-    		@extend %submenu-colors;
-    		font-weight: 400;
-    	}
+		a {
+			@extend %submenu-colors;
+			font-weight: 400;
+
+			// TODO: Implement %navigation-links when libsass gets better placeholder support
+			&:link {
+				text-decoration: none;
+			}
+
+			&:hover, &:active {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+main {
+	@extend %page-background;
+}
+
+#wb-info {
+	@extend %page-background;
+	font-size:80%;
+	background: url(../assets/sft-deco.gif) repeat-x scroll center top #EFEFEF;
+
+	> .container {
+		background: transparent url(../assets/sft-deco-leaf.gif) no-repeat top center;
+	}
+
+	h2, h3 {
+		font-size: 120%;
+		font-weight: 700;
+	}
+
+	li {
+		line-height: 2;
+	}
+
+	a {
+		color: #000;
+
+		// TODO: Implement %navigation-links when libsass gets better placeholder support
+		&:link {
+			text-decoration: none;
+		}
+
+		&:hover, &:active {
+			text-decoration: underline;
+		}
+	}
+}
+
+#gc-info {
+	background-color: #000;
+	margin-top: 10px;
+
+	ul {
+		margin: 0;
+	}
+
+	li {
+		margin: 12px 0 13px 68px;
+
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+
+	a {
+		color: #FFF;
+
+		span {
+			font-weight: 700;
+			text-transform: uppercase;
+
+			&:after {
+				content:"\a";
+				white-space: pre;
+			}
+		}
+	}
+}
+
+#gc-tctr {
+	padding-top: 30px;
+
+	> {
+		:first-child {
+			border-right: 1px solid #999999;
+			padding-right: 10px;
+			line-height: 1.5
+		}
+	}
+}
+
+#canada-ca {
+	float: right;
+
+	a {
+		border-left: 1px solid #666666;
+		padding-left: 44px;
+		display: inline-block;
+		vertical-align: middle;
+		font-size: 160%
 	}
 }

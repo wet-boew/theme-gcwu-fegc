@@ -99,11 +99,21 @@
 {{#isnt footer "false"}}
 		<footer role="contentinfo" id="wb-info" class="visible-md visible-lg">
 			<div class="container">
-				<nav role="navigation" class="row">
+				<nav role="navigation">
 					<h2>{{#i18n "tmpl-site-info"}}{{/i18n}}</h2>
-					{{>legal}}
-					{{>footer}}
+					{{>notices}}
+					<div class="row">
+						{{>footer}}
+					</div>
 				</nav>
+			</div>
+			<div id="gc-info">
+				<div class="container">
+					<nav role="navigation">
+						<h2>{{#i18n "tmpl-gc-foot"}}{{/i18n}}</h2>
+						{{>gcfooter}}
+					</nav>
+				</div>
 			</div>
 		</footer>
 {{/isnt}}
