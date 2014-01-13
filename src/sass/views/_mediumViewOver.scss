@@ -89,7 +89,8 @@ body {
 #wb-sm {
 	margin-top: -1px;
 	.nvbar {
-		background: linear-gradient(#146094, #23447E) #23447E;
+		background-color: #146094;
+		background-image: linear-gradient(#146094, #23447E);
 		border-top: 1px solid #87AEC9;
 		border-bottom: 4px solid #CCCCCC;
 
