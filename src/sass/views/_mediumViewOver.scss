@@ -164,7 +164,7 @@ main {
 		background: transparent url(../assets/sft-deco-leaf.gif) no-repeat top center;
 
 		> :before {
-			@extend %page-background;
+			background: transparent;
 			content: " ";
 			margin-left: -15px;
 			margin-right: -15px;
