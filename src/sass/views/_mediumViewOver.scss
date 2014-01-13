@@ -80,6 +80,7 @@ body {
 		@extend %search-controls-overrides;
 		background-image: linear-gradient(#F0F0F0, #CCCCCC);
 		padding: 2px 6px;
+		line-height: 1;
 	}
 }
 
@@ -146,7 +147,6 @@ main {
 
 #wb-info {
 	@extend %page-background;
-	font-size:80%;
 	background: url(../assets/sft-deco.gif) repeat-x scroll center top #EFEFEF;
 
 	> .container {
@@ -185,7 +185,7 @@ main {
 	}
 
 	li {
-		margin: 12px 0 13px 68px;
+		margin: 12px 0 13px 48px;
 
 		&:first-child {
 			margin-left: 0;
