@@ -9,6 +9,8 @@
  */
 %page-background {
 	background-color:#FFF;
+	border-left: 1px solid #CCC;
+	border-right: 1px solid #CCC;
 }
 
 %submenu-colors {
@@ -141,16 +143,34 @@ body {
 	}
 }
 
+#wb-bc {
+	.container {
+		@extend %page-background;
+	}
+
+	.breadcrumb {
+		margin-bottom: 0;
+	}
+}
+
 main {
 	@extend %page-background;
 }
 
 #wb-info {
-	@extend %page-background;
 	background: url(../assets/sft-deco.gif) repeat-x scroll center top #EFEFEF;
 
 	> .container {
 		background: transparent url(../assets/sft-deco-leaf.gif) no-repeat top center;
+
+		> :before {
+			@extend %page-background;
+			content: " ";
+			margin-left: -15px;
+			margin-right: -15px;
+			display: block;
+			height: 25px;
+		}
 	}
 
 	h2, h3 {
