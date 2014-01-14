@@ -48,18 +48,15 @@
 				</div>
 
 				<div class="container">
-					<div class="row">
-
-						<div id="wb-sttl">
-							{{>brand}}
-						</div>
-{{#isnt sitesearch "false"}}
-						<section id="wb-srch" class="visible-md visible-lg">
-							<h2>{{#i18n "tmpl-search"}}{{/i18n}}</h2>
-							{{>sitesearch}}
-						</section>
-{{/isnt}}
+					<div id="wb-sttl">
+						{{>brand}}
 					</div>
+{{#isnt sitesearch "false"}}
+					<section id="wb-srch" class="visible-md visible-lg">
+						<h2>{{#i18n "tmpl-search"}}{{/i18n}}</h2>
+						{{>sitesearch}}
+					</section>
+{{/isnt}}
 				</div>
 			</div>
 {{#isnt sitemenu "false"}}
