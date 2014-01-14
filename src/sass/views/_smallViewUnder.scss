@@ -38,6 +38,12 @@
 	}
 }
 
-#wb-glb-mn a {
-	color: #FFF;
+#wb-glb-mn {
+	> ul {
+		margin: 10px 0;
+
+		a {
+			color: #FFF;
+		}
+	}
 }
