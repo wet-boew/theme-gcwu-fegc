@@ -34,7 +34,7 @@
 //			text-decoration: none;
 //		}
 //
-//		&:hover, &:active {
+//		&:hover, &:focus {
 //			text-decoration: underline;
 //		}
 //	}
@@ -77,7 +77,7 @@ body {
 			text-decoration: none;
 		}
 
-		&:hover, &:active {
+		&:hover, &:focus {
 			text-decoration: underline;
 		}
 	}
@@ -146,7 +146,7 @@ body {
 		padding: 0.48em 1.17em 0.48em 0.79em;
 		text-decoration: none;
 
-		&:hover, &:active {
+		&:hover, &:focus {
 			@extend %submenu-colors;
 		}
 	}
@@ -166,7 +166,7 @@ body {
 				text-decoration: none;
 			}
 
-			&:hover, &:active {
+			&:hover, &:focus {
 				text-decoration: underline;
 			}
 		}
@@ -221,7 +221,7 @@ main {
 			text-decoration: none;
 		}
 
-		&:hover, &:active {
+		&:hover, &:focus {
 			text-decoration: underline;
 		}
 	}
