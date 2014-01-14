@@ -200,6 +200,7 @@ main {
 		background: transparent url(../assets/sft-deco-leaf.gif) no-repeat top center;
 
 		> :before {
+			@extend %page-background;
 			background: transparent;
 			content: " ";
 			margin-left: -15px;
@@ -263,7 +264,7 @@ main {
 }
 
 #gc-tctr {
-	padding-top: 30px;
+	padding-top: 5px;
 
 	> {
 		:first-child {
