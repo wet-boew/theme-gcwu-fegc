@@ -131,11 +131,20 @@ body {
 					padding: 0;
 					border-left: 1px solid #124B79;
 					border-right: 1px solid #15598F;
+
+					&.active {
+						border-left-color: #CCC;
+						border-right-color: #CCC;
+					}
 				}
 			}
 		}
+	}
 
-		
+	.active {
+		a {
+			@extend %submenu-colors;
+		}
 	}
 	
 	a {
@@ -145,10 +154,6 @@ body {
 		font-size: 90%;
 		padding: 0.48em 1.17em 0.48em 0.79em;
 		text-decoration: none;
-
-		&:hover, &:focus {
-			@extend %submenu-colors;
-		}
 	}
 
 	.sm {
