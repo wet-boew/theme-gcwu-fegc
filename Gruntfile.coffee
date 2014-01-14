@@ -135,7 +135,7 @@ module.exports = ->
 			base:
 				expand: true
 				cwd: "src/sass"
-				src: "theme.scss"
+				src: "*theme.scss"
 				dest: "dist/unmin/css"
 				ext: ".css"
 
@@ -171,7 +171,6 @@ module.exports = ->
 					"!**/wet-boew.css"
 					"!**/ie8-wet-boew.css"
 					"!**/*.min.css"
-					"!**/ie8*.css"
 				]
 				ext: ".min.css"
 				dest: "dist/css"
