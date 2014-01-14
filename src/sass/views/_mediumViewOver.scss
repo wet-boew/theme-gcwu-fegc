@@ -33,6 +33,10 @@
 //		&:link {
 //			text-decoration: none;
 //		}
+//
+//		&:hover, &:active {
+//			text-decoration: underline;
+//		}
 //	}
 //}
 //
@@ -46,13 +50,44 @@ body {
 }
 
 #gcwu-sig {
-	display: block;
+	display: inline-block;
 }
 
 #wmms {
 	@extend %brand-height;
 	float: right;
 }
+
+
+#gc-bar {
+	float: right;
+	margin: 10px 0;
+
+	li{
+		padding:0;
+		&:first-child {
+			a {
+				border-left: none;
+			}
+		}
+	}
+
+	a {
+		color: #FFF;
+		border-left: 1px solid #FFF;
+		padding: 0 0.5em;
+
+		// TODO: Implement %navigation-links when libsass gets better placeholder support
+		&:link {
+			text-decoration: none;
+		}
+
+		&:hover, &:active {
+			text-decoration: underline;
+		}
+	}
+}
+
 
 #wb-sttl {
 	@extend %brand-height;
@@ -80,7 +115,7 @@ body {
 
 	.btn {
 		@extend %search-controls-overrides;
-		background-image: linear-gradient(#F0F0F0, #CCCCCC);
+		background-image: linear-gradient(#F0F0F0, #CCC);
 		padding: 2px 6px;
 		line-height: 1;
 	}
@@ -215,7 +250,6 @@ main {
 
 	a {
 		color: #FFF;
-
 		span {
 			font-weight: 700;
 			text-transform: uppercase;

@@ -7,14 +7,23 @@
 /*
   @title: Small view and under (screen only)
  */
-#gcwu-sig {
+
+%small-view-display-none {
 	display: none;
+}
+
+#gcwu-sig {
+	@extend %small-view-display-none;
 }
 
 #wmms {
 	position: absolute;
 	left: 0;
 	top: -2em;
+}
+
+#gc-bar {
+	@extend %small-view-display-none;
 }
 
 #wb-bnr {
