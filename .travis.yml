@@ -2,8 +2,8 @@ language: node_js
 node_js:
   - '0.10'
 
-install:
-  - scripts/setup
+before_install:
+  - npm install -g yo
 
 script:
   - grunt
