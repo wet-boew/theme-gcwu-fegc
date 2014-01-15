@@ -1,3 +1,12 @@
 {
-	"key": "Value"
+	"tmpl-health": "Santé",
+	"tmpl-health-url": "canadiensensante.gc.ca",
+	"tmpl-travel": "Voyage",
+	"tmpl-travel-url": "voyage.gc.ca",
+	"tmpl-servicecanada": "Service Canada",
+	"tmpl-servicecanada-url": "servicecanada.gc.ca",
+	"tmpl-jobs": "Emplois",
+	"tmpl-jobs-url": "guichetemplois.gc.ca",
+	"tmpl-economy": "Économie",
+	"tmpl-economy-url": "plandaction.gc.ca"
 }
