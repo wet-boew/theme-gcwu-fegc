@@ -1,11 +1,7 @@
 <object id="gcwu-sig" type="image/svg+xml" tabindex="-1" role="img" data="{{assets}}/assets/sig-{{language}}.svg" aria-label="{{#i18n "tmpl-gc-sig"}}{{/i18n}}"></object>
 <ul id="gc-bar" class="list-inline">
 	<li><a href="http://www.canada.ca/{{language}}/index.html" rel="external">Canada.ca</a></li>
-	<li><a href="http://www.canada.ca/{{language}}/services/index.html" rel="external">Services</a></li>
-{{#isnt language "fr"}}
-	<li><a href="http://www.canada.ca/en/gov/dept/index.html" rel="external">Departments</a></li>
-{{else}}
-	<li><a href="http://www.canada.ca/fr/gouv/dept/index.html" rel="external">Ministères</a></li>
-{{/isnt}}
+	<li><a href="http://www.canada.ca/{{language}}/services/index.html" rel="external">{{#i18n "tmpl-services"}}{{/i18n}}</a></li>
+	<li><a href="http://www.canada.ca/{{language}}/gov/dept/index.html" rel="external">{{#i18n "tmpl-depts"}}{{/i18n}}</a></li>
 	{{>languagetoggle}}
 </ul>
