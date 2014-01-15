@@ -46,4 +46,21 @@
 			color: #FFF;
 		}
 	}
+
+	header {
+		background-color: #174F88;
+	}
+
+	nav {
+		a {
+			color: #000;
+			text-decoration: none;
+		}
+	}
+
+	summary {
+		&:hover, &:focus {
+			background: transparent;
+		}
+	}
 }
