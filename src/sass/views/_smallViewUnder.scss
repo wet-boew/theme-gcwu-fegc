@@ -28,6 +28,10 @@
 
 #wb-bnr {
 	background-image: linear-gradient(#4474AD, #174F88);
+
+	.row {
+		margin: 0;
+	}
 }
 
 #wb-sttl {
@@ -39,6 +43,8 @@
 }
 
 #wb-glb-mn {
+	padding: 0;
+
 	> ul {
 		margin: 10px 0;
 
