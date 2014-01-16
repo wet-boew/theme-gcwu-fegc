@@ -196,8 +196,16 @@ body {
 	}
 }
 
-main {
-	@extend %page-background;
+body {
+	> {
+		main {
+			@extend %page-background;
+		}
+
+		header + .container {
+			@extend %page-background;
+		}
+	}
 }
 
 #wb-info {
