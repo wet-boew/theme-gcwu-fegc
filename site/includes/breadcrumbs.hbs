@@ -1,0 +1,15 @@
+<div class="container">
+	<div class="row">
+		<ol class="breadcrumb">
+			<li>
+				<a href="{{assets}}/index-{{language}}.html">{{#i18n "tmpl-home"}}{{/i18n}}</a>
+			</li>
+{{#is breadcrumb3 "true"}}
+			<li>
+				<a href="{{assets}}/demos/{{tag}}/index-{{language}}.html">{{breadcrumb3-title}}</a>
+			</li>
+{{/is}}
+			<li>{{title}}</li>
+		</ol>
+	</div>
+</div>
