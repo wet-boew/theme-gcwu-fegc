@@ -89,6 +89,10 @@ body {
 	}
 }
 
+#wb-bnr {
+	min-height: 170px;
+}
+
 #wb-sttl {
 	@extend %brand-height;
 	margin-top: 40px;
