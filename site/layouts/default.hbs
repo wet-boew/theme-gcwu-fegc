@@ -69,12 +69,10 @@
 			<span data-trgt="mb-pnl" class="wb-menu hide"></span>
 {{/isnt}}
 {{#isnt breadcrumb "false"}}
-	{{#isnt assets "."}}
 			<nav role="navigation" id="wb-bc" property="breadcrumb">
 				<h2>{{#i18n "you-are-here"}}{{/i18n}}</h2>
 				{{>breadcrumbs}}
 			</nav>
-	{{/isnt}}
 {{/isnt}}
 		</header>
 
