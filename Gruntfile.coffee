@@ -227,7 +227,7 @@ module.exports = ->
 				files: [
 						#site
 						expand: true
-						cwd: "lib/wet-boew/src/themestyle/theme-wet-boew"
+						cwd: "site/pages"
 						src: [
 							"*.hbs"
 						]
