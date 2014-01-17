@@ -45,7 +45,7 @@ body {
 	background: {
 		image: url(../assets/header-leaf.jpg), url(../assets/header-bg.jpg);
 		repeat: no-repeat, repeat-x;
-		position: center 2.58em;
+		position: center 2.7em;
 	}
 }
 
@@ -54,9 +54,13 @@ body {
 	float: right;
 }
 
+#wb-bar {
+	line-height: 1;
+}
+
 #gc-bar {
 	float: right;
-	margin: 10px 0;
+	margin: 15px 0;
 
 	li {
 		padding:0;
@@ -90,11 +94,11 @@ body {
 }
 
 #wb-bnr {
-	min-height: 170px;
+	min-height: 167px;
 }
 
 #wb-sttl {
-	@extend %brand-height;
+	min-height: 2em;
 	margin-top: 40px;
 	margin-bottom: 5px;
 	a {
