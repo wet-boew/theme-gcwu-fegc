@@ -66,17 +66,6 @@ body {
 		padding:0;
 	}
 
-	> {
-
-		li {
-			&:first-child {
-				a {
-					border-left: none;
-				}
-			}
-		}
-	}
-
 	a {
 		color: #FFF;
 		border-left: 1px solid #FFF;
@@ -89,6 +78,31 @@ body {
 
 		&:hover, &:focus {
 			text-decoration: underline;
+		}
+	}
+
+	> {
+
+		li {
+			&:first-child {
+				a {
+					border-left: 0;
+				}
+			}
+		}
+	}
+
+	ul {
+		li {
+			a {
+				border-right: 1px solid #FFF;
+			}
+
+			&:last-child {
+				a {
+					border-right: 0;
+				}
+			}
 		}
 	}
 }

@@ -1,9 +1,15 @@
-<!-- TODO: Add i18n -->
+---
+{
+	"officiallanguage": "<%= language === 'en' || language === 'fr' %>"
+}
+---
 <ul class="list-inline">
+{{#is gcfooter.officiallanguage "true"}}
 	<li><a href="http://healthycanadians.gc.ca/index-{{#i18n "lang-code-iso-639-2"}}{{/i18n}}.php"><span>{{#i18n "tmpl-health"}}{{/i18n}}</span>{{#i18n "tmpl-health-url"}}{{/i18n}}</a></li>
 	<li><a href="http://www.travel.gc.ca/index-{{#i18n "lang-code-iso-639-2"}}{{/i18n}}.asp"><span>{{#i18n "tmpl-travel"}}{{/i18n}}</span>{{#i18n "tmpl-travel-url"}}{{/i18n}}</a></li>
 	<li><a href="http://www.servicecanada.gc.ca/{{#i18n "lang-code-iso-639-2"}}{{/i18n}}/home.shtml"><span>{{#i18n "tmpl-servicecanada"}}{{/i18n}}</span>{{#i18n "tmpl-servicecanada-url"}}{{/i18n}}</a></li>
 	<li><a href="http://www.jobbank.gc.ca/intro-{{#i18n "lang-code-iso-639-2"}}{{/i18n}}.aspx"><span>{{#i18n "tmpl-jobs"}}{{/i18n}}</span>{{#i18n "tmpl-jobs-url"}}{{/i18n}}</a></li>
 	<li><a href="http://actionplan.gc.ca/{{language}}"><span>{{#i18n "tmpl-economy"}}{{/i18n}}</span>{{#i18n "tmpl-economy-url"}}{{/i18n}}</a></li>
-	<li id="canada-ca"><a href="http://www.canada.ca/{{language}}/index.html">Canada.ca</a></li>
+{{/is}}
+	<li id="canada-ca"><a href="http://www.canada.ca/{{#is gcfooter.officiallanguage "true"}}{{language}}/index.html{{/is}}">Canada.ca</a></li>
 </ul>
