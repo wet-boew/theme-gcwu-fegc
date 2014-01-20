@@ -7,6 +7,12 @@
 /*
   @title: Medium view and over (screen only)
  */
+
+$search-button-gradient-start: #F0F0F0;
+$search-button-gradient-end: #CCC;
+$navigation-bar-gradient-start: #146094;
+$navigation-bar-gradient-end: #23447E;
+
 %page-background {
 	background-color:#FFF;
 	border-left: 1px solid #CCC;
@@ -25,6 +31,11 @@
 
 %brand-height {
 	height: 33px;
+}
+
+@mixin linear-background($start-color, $end-color) {
+	background-image: linear-gradient($start-color, $end-color);
+	filter: unquote("progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#{$start-color}', endColorstr='#{$end-color}')");
 }
 
 // TODO: Implement when libsass gets better placeholder support
@@ -129,6 +140,9 @@ body {
 	border-right: 1px solid #15527D;
 	border-top: 1px solid #87AEC9;
 	padding: 11px 10px 6px 12px;
+	margin-bottom: -1px;
+	position: relative;
+	z-index: 2;
 
 	input {
 		@extend %search-controls-overrides;
@@ -137,7 +151,7 @@ body {
 
 	.btn {
 		@extend %search-controls-overrides;
-		background-image: linear-gradient(#F0F0F0, #CCC);
+		@include linear-background ($search-button-gradient-start, $search-button-gradient-end);
 		padding: 2px 6px;
 		line-height: 1;
 	}
@@ -147,7 +161,7 @@ body {
 	margin-top: -1px;
 	.nvbar {
 		background-color: #146094;
-		background-image: linear-gradient(#146094, #23447E);
+		@include linear-background ($navigation-bar-gradient-start, $navigation-bar-gradient-end);
 		border-top: 1px solid #87AEC9;
 		border-bottom: 4px solid #CCCCCC;
 
