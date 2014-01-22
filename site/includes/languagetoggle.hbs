@@ -1,11 +1,10 @@
-<!-- TODO: Implement i18n language name when WET core is updated to support it -->
 <li id="wb-lng"><h2>{{#i18n "tmpl-lang-select"}}{{/i18n}}</h2>
 	<ul class="list-inline">
 {{#isnt language "fr" }}
-		<li><a lang="fr" href="{{altLangPrefix}}-fr.html">Français</a></li>
+		<li><a lang="fr" href="{{altLangPrefix}}-fr.html">{{#i18n "lang-native" language="en"}}{{/i18n}}</a></li>
 {{/isnt}}
 {{#isnt language "en" }}
-		<li><a lang="en" href="{{altLangPrefix}}-en.html">English</a></li>
+		<li><a lang="en" href="{{altLangPrefix}}-en.html">{{#i18n "lang-native" language="fr"}}{{/i18n}}</a></li>
 {{/isnt}}
 	</ul>
 </li>
