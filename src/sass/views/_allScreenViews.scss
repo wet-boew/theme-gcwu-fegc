@@ -35,7 +35,14 @@
 #wb-sttl {
 	a {
 		color: #FFFFFF !important;
-		text-decoration: none;
+
+		&:link {
+			text-decoration: none;
+		}
+
+		&:hover, &:focus {
+			text-decoration: underline;
+		}
 	}
 }
 
