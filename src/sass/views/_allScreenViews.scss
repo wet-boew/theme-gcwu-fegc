@@ -12,6 +12,11 @@
 	height: 22px;
 }
 
+%no-breadcrumb-icon {
+	content: "";
+	padding: 0;
+}
+
 .wb-slc {
 	a {
 		color: #FFF;
@@ -50,5 +55,41 @@
 	.breadcrumb {
 		margin-bottom: 0;
 		background: transparent;
+	}
+
+	li {
+		&:before, &:after {
+			font-family: "Glyphicons Halflings";
+			font-size: 0.7em;
+			color: #333;
+		}
+		&:before {
+			content: "\e092";
+		}
+
+		&:first-child {
+			&:before {
+				@extend %no-breadcrumb-icon;
+			}
+		}
+	}
+}
+
+[dir=rtl] {
+	#wb-bc {
+		li {
+			&:before {
+				@extend %no-breadcrumb-icon;
+			}
+			&:after {
+				content: "\e091";
+				padding: 0 5px;
+			}
+			&:first-child {
+				&:after {
+					@extend %no-breadcrumb-icon;
+				}
+			}
+		}
 	}
 }
