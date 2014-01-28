@@ -78,3 +78,17 @@
 #wb-bc {
 	background: linear-gradient(#F0EFEF, #DFDFDD) repeat scroll 0 0 / 100% auto #DFDFDD;
 }
+
+[dir=rtl] {
+	#wmms {
+		right: 0;
+	}
+
+	#wb-glb-mn {
+		> {
+			ul {
+				text-align: left;
+			}
+		}
+	}
+}
