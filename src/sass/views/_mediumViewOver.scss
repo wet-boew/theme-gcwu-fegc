@@ -68,6 +68,10 @@ body {
 	}
 }
 
+#gcwu-sig {
+	position: absolute;
+}
+
 #wmms {
 	@extend %brand-height;
 	@extend %float-right;
