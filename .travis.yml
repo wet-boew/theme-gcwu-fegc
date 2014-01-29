@@ -11,4 +11,4 @@ install:
   - scripts/setup
 
 script:
-  - grunt
+  - grunt && ./scripts/travis_artifacts.sh
