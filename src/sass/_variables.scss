@@ -4,3 +4,15 @@
  * wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html
  *
  */
+
+@mixin linear-background($start-color, $end-color, $reverse_default: 0) {
+	background: {
+		@if $reverse_default == 1 {
+			color: $start-color;
+		} @else {
+			color: $end-color;
+		}
+		image: linear-gradient($start-color, $end-color);
+	}
+	filter: unquote("progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#{$start-color}', endColorstr='#{$end-color}')");
+}
