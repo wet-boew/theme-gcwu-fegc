@@ -13,7 +13,7 @@
 }
 
 %no-breadcrumb-icon {
-	content: "";
+	content: none;
 	padding: 0;
 }
 
@@ -41,6 +41,7 @@
 	a {
 		color: #FFFFFF !important;
 
+		// TODO: Implement %navigation-links when libsass gets better placeholder support
 		&:link {
 			text-decoration: none;
 		}
