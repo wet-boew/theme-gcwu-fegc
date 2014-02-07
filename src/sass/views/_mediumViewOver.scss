@@ -41,11 +41,6 @@ $navigation-bar-gradient-end: #23447E;
 	float: right;
 }
 
-@mixin linear-background($start-color, $end-color) {
-	background-image: linear-gradient($start-color, $end-color);
-	filter: unquote("progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#{$start-color}', endColorstr='#{$end-color}')");
-}
-
 // TODO: Implement when libsass gets better placeholder support
 // %navigation-links {
 //	a {
@@ -172,8 +167,7 @@ body {
 #wb-sm {
 	margin-top: -1px;
 	.nvbar {
-		background-color: #146094;
-		@include linear-background ($navigation-bar-gradient-start, $navigation-bar-gradient-end);
+		@include linear-background ($navigation-bar-gradient-start, $navigation-bar-gradient-end, 1);
 		border-top: 1px solid #87AEC9;
 		border-bottom: 4px solid #CCCCCC;
 
