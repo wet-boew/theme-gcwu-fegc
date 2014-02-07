@@ -15,8 +15,10 @@ $navigation-bar-gradient-end: #23447E;
 
 %page-background {
 	background-color:#FFF;
-	border-left: 1px solid #CCC;
-	border-right: 1px solid #CCC;
+	border: {
+		left: 1px solid #CCC;
+		right: 1px solid #CCC;
+	}
 }
 
 %submenu-colors {
@@ -131,8 +133,10 @@ body {
 
 #wb-sttl {
 	min-height: 2em;
-	margin-top: 40px;
-	margin-bottom: 5px;
+	margin: {
+		top: 40px;
+		bottom: 5px;
+	}
 	a {
 		position: absolute; //Required to allow multiline site titles
 		font-size: 1.9em;
@@ -143,9 +147,11 @@ body {
 #wb-srch {
 	@extend %float-right;
 	background: #146094;
-	border-left: 1px solid #15527D;
-	border-right: 1px solid #15527D;
-	border-top: 1px solid #87AEC9;
+	border: {
+		left: 1px solid #15527D;
+		right: 1px solid #15527D;
+		top: 1px solid #87AEC9;
+	}
 	padding: 11px 10px 6px 12px;
 	margin-bottom: -1px;
 	position: relative;
@@ -168,8 +174,10 @@ body {
 	margin-top: -1px;
 	.nvbar {
 		@include linear-background ($navigation-bar-gradient-start, $navigation-bar-gradient-end, 1);
-		border-top: 1px solid #87AEC9;
-		border-bottom: 4px solid #CCCCCC;
+		border: {
+			top: 1px solid #87AEC9;
+			bottom: 4px solid #CCCCCC;
+		}
 
 		ul {
 			&.menu {
@@ -177,12 +185,16 @@ body {
 				> {
 					li {
 						padding: 0;
-						border-left: 1px solid #124B79;
-						border-right: 1px solid #15598F;
+						border: {
+							left: 1px solid #124B79;
+							right: 1px solid #15598F;
+						}
 
 						&.active {
-							border-left-color: #CCC;
-							border-right-color: #CCC;
+							border: {
+								left-color: #CCC;
+								right-color: #CCC;
+							}
 						}
 					}
 				}
@@ -199,17 +211,21 @@ body {
 	a {
 		display: block;
 		color: #FFF;
-		font-weight: 700;
-		font-size: 90%;
+		font: {
+			weight: 700;
+			size: 90%;
+		}
 		padding: 0.48em 1.17em 0.48em 0.79em;
 		text-decoration: none;
 	}
 
 	.sm {
 		@extend %submenu-colors;
-		border-bottom: 4px solid #0F315B;
+		border: {
+			bottom: 4px solid #0F315B;
+			radius: 0 0 3px 3px;
+		}
 		box-shadow: 0 5px 5px -4px rgba(0, 0, 0, 0.5), 5px 5px 5px -4px rgba(0, 0, 0, 0.5), -5px 5px 5px -4px rgba(0, 0, 0, 0.5);
-		border-radius: 0 0 3px 3px;
 
 		a {
 			@extend %submenu-colors;
@@ -257,8 +273,10 @@ body {
 					@extend %page-background;
 					background: transparent;
 					content: " ";
-					margin-left: -15px;
-					margin-right: -15px;
+					margin: {
+						left: -15px;
+						right: -15px;
+					}
 					display: block;
 					height: 25px;
 				}
@@ -267,8 +285,10 @@ body {
 	}
 
 	h2, h3 {
-		font-size: 120%;
-		font-weight: 700;
+		font: {
+			size: 120%;
+			weight: 700;
+		}
 	}
 
 	li {
@@ -320,8 +340,10 @@ body {
 }
 
 #gc-tctr {
-	padding-top: 5px;
-	padding-right: 0;
+	padding: {
+		top: 5px;
+		right: 0;
+	}
 
 	> {
 		:first-child {
@@ -353,8 +375,10 @@ body {
 		@extend %float-left;
 
 		a {
-			border-left: 0;
-			border-right: 1px solid #FFF;
+			border: {
+				left: 0;
+				right: 1px solid #FFF;
+			}
 		}
 
 		> {
@@ -394,10 +418,14 @@ body {
 
 		> {
 			:first-child {
-				border-right: 0;
-				padding-right: 0;
-				border-left: 1px solid #999999;
-				padding-left: 10px;
+				border: {
+					left: 1px solid #999999;
+					right: 0;
+				}
+				padding: {
+					left: 10px;
+					right: 0;
+				}
 			}
 		}
 	}
@@ -406,10 +434,14 @@ body {
 		@extend %float-left;
 
 		a {
-			border-left: 0;
-			border-right: 1px solid #666;
-			padding-left: 0;
-			padding-right: 44px;
+			border: {
+				left: 0;
+				right: 1px solid #666;
+			}
+			padding: {
+				left: 0;
+				right: 44px;
+			}
 		}
 	}
 }
