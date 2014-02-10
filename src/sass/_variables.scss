@@ -5,6 +5,37 @@
  *
  */
 
+$gc-header-footer-background-color: #000;
+$gc-header-footer-text-color: #FFF;
+$gc-header-footer-divider-color: $gc-header-footer-text-color;
+$smallview-banner-gradient-start: #4474AD;
+$smallview-banner-gradient-end: #174F88;
+$smallview-banner-text-shadow-color: #044062;
+$smallview-breadcrumb-bar-gradient-start: #F0EFEF;
+$smallview-breadcrumb-bar-gradient-end: #DFDFDD;
+$smallview-menu-header-background-color: #174F88;
+$smallview-menu-links-color: #000;
+$mediumview-banner-text-shadow-color: #333;
+$mediumview-menubar-gradient-start: #146094;
+$mediumview-menubar-gradient-end: #23447E;
+$mediumview-menubar-text-color: #FFF;
+$mediumview-menubar-top-border-color: #87AEC9;
+$mediumview-menubar-side-border-color: #15527D;
+$mediumview-submenu-background-color: #CCC;
+$mediumview-submenu-text-color: #000;
+$mediumview-submenu-shadow-color: rgba(0, 0, 0, 0.5);
+$mediumview-submenu-bottom-border-color: #0F315B;
+$mediumview-menubar-bottom-border-color: $mediumview-submenu-background-color;
+$mediumview-menuitem-left-border-color: #124B79;
+$mediumview-menuitem-left-border-color: #15598F;
+$mediumview-menuitem-hover-border-color: $mediumview-menubar-bottom-border-color;
+$mediumview-search-button-gradient-start: #F0F0F0;
+$mediumview-search-button-gradient-end: #CCC;
+$mediumview-page-border-color: #CCC;
+$mediumview-footer-background-color: #EFEFEF;
+$mediumview-notices-border-color: #999;
+$mediumview-canadaca-divider-color: #666;
+
 @mixin linear-background($start-color, $end-color, $reverse_default: 0) {
 	background: {
 		@if $reverse_default == 1 {

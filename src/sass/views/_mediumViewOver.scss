@@ -8,22 +8,17 @@
   @title: Medium view and over (screen only)
  */
 
-$search-button-gradient-start: #F0F0F0;
-$search-button-gradient-end: #CCC;
-$navigation-bar-gradient-start: #146094;
-$navigation-bar-gradient-end: #23447E;
-
 %page-background {
 	background-color:#FFF;
 	border: {
-		left: 1px solid #CCC;
-		right: 1px solid #CCC;
+		left: 1px solid $mediumview-page-border-color;
+		right: 1px solid $mediumview-page-border-color;
 	}
 }
 
 %submenu-colors {
-	background-color: #CCC;
-	color: #000;
+	background-color: $mediumview-submenu-background-color;
+	color: $mediumview-submenu-text-color;
 }
 
 %search-controls-overrides {
@@ -87,8 +82,7 @@ body {
 	}
 
 	a {
-		color: #FFF;
-		border-left: 1px solid #FFF;
+		border-left: 1px solid $gc-header-footer-divider-color;
 		padding: 0 0.5em;
 
 		// TODO: Implement %navigation-links when libsass gets better placeholder support
@@ -115,7 +109,7 @@ body {
 	ul {
 		li {
 			a {
-				border-right: 1px solid #FFF;
+				border-right: 1px solid $gc-header-footer-divider-color;
 			}
 
 			&:last-child {
@@ -140,7 +134,7 @@ body {
 	a {
 		position: absolute; //Required to allow multiline site titles
 		font-size: 1.9em;
-		text-shadow: 1px 1px 1px #333;
+		text-shadow: 1px 1px 1px $mediumview-banner-text-shadow-color;
 	}
 }
 
@@ -148,9 +142,9 @@ body {
 	@extend %float-right;
 	background: #146094;
 	border: {
-		left: 1px solid #15527D;
-		right: 1px solid #15527D;
-		top: 1px solid #87AEC9;
+		left: 1px solid $mediumview-menubar-side-border-color;
+		right: 1px solid $mediumview-menubar-side-border-color;
+		top: 1px solid $mediumview-menubar-top-border-color;
 	}
 	padding: 11px 10px 6px 12px;
 	margin-bottom: -1px;
@@ -164,7 +158,7 @@ body {
 
 	.btn {
 		@extend %search-controls-overrides;
-		@include linear-background ($search-button-gradient-start, $search-button-gradient-end);
+		@include linear-background ($mediumview-search-button-gradient-start, $mediumview-search-button-gradient-end);
 		padding: 2px 6px;
 		line-height: 1;
 	}
@@ -173,10 +167,10 @@ body {
 #wb-sm {
 	margin-top: -1px;
 	.nvbar {
-		@include linear-background ($navigation-bar-gradient-start, $navigation-bar-gradient-end, 1);
+		@include linear-background ($mediumview-menubar-gradient-start, $mediumview-menubar-gradient-end, 1);
 		border: {
-			top: 1px solid #87AEC9;
-			bottom: 4px solid #CCCCCC;
+			top: 1px solid $mediumview-menubar-top-border-color;
+			bottom: 4px solid $mediumview-menubar-bottom-border-color;
 		}
 
 		ul {
@@ -186,14 +180,14 @@ body {
 					li {
 						padding: 0;
 						border: {
-							left: 1px solid #124B79;
-							right: 1px solid #15598F;
+							left: 1px solid $mediumview-menuitem-left-border-color;
+							right: 1px solid $mediumview-menuitem-left-border-color;
 						}
 
 						&.active {
 							border: {
-								left-color: #CCC;
-								right-color: #CCC;
+								left-color: $mediumview-menuitem-hover-border-color;
+								right-color: $mediumview-menuitem-hover-border-color;
 							}
 						}
 					}
@@ -210,7 +204,7 @@ body {
 	
 	a {
 		display: block;
-		color: #FFF;
+		color: $mediumview-menubar-text-color;
 		font: {
 			weight: 700;
 			size: 90%;
@@ -222,10 +216,10 @@ body {
 	.sm {
 		@extend %submenu-colors;
 		border: {
-			bottom: 4px solid #0F315B;
+			bottom: 4px solid $mediumview-submenu-bottom-border-color;
 			radius: 0 0 3px 3px;
 		}
-		box-shadow: 0 5px 5px -4px rgba(0, 0, 0, 0.5), 5px 5px 5px -4px rgba(0, 0, 0, 0.5), -5px 5px 5px -4px rgba(0, 0, 0, 0.5);
+		box-shadow: 0 5px 5px -4px $mediumview-submenu-shadow-color, 5px 5px 5px -4px $mediumview-submenu-shadow-color, -5px 5px 5px -4px $mediumview-submenu-shadow-color;
 
 		a {
 			@extend %submenu-colors;
@@ -262,7 +256,7 @@ body {
 }
 
 #wb-info {
-	background: url(../assets/sft-deco.gif) repeat-x scroll center top #EFEFEF;
+	background: $mediumview-footer-background-color url(../assets/sft-deco.gif) repeat-x scroll center top;
 
 	> {
 		.container {
@@ -310,7 +304,7 @@ body {
 }
 
 #gc-info {
-	background-color: #000;
+	background-color: $gc-header-footer-background-color;
 	margin-top: 10px;
 
 	ul {
@@ -326,7 +320,7 @@ body {
 	}
 
 	a {
-		color: #FFF;
+		color: $gc-header-footer-text-color;
 		span {
 			font-weight: 700;
 			text-transform: uppercase;
@@ -347,7 +341,7 @@ body {
 
 	> {
 		:first-child {
-			border-right: 1px solid #999999;
+			border-right: 1px solid $mediumview-notices-border-color;
 			padding-right: 10px;
 			line-height: 1.5
 		}
@@ -358,7 +352,7 @@ body {
 	@extend %float-right;
 
 	a {
-		border-left: 1px solid #666;
+		border-left: 1px solid $mediumview-canadaca-divider-color;
 		padding-left: 44px;
 		display: inline-block;
 		vertical-align: middle;
@@ -377,7 +371,7 @@ body {
 		a {
 			border: {
 				left: 0;
-				right: 1px solid #FFF;
+				right: 1px solid $gc-header-footer-divider-color;
 			}
 		}
 
@@ -393,7 +387,7 @@ body {
 			padding: 0;
 			li {
 				a {
-					border-right: 1px solid #FFF;
+					border-right: 1px solid $gc-header-footer-divider-color;
 				}
 			}
 		}
@@ -415,11 +409,10 @@ body {
 	}
 
 	#gc-tctr {
-
 		> {
 			:first-child {
 				border: {
-					left: 1px solid #999999;
+					left: 1px solid $mediumview-notices-border-color;
 					right: 0;
 				}
 				padding: {
@@ -436,7 +429,7 @@ body {
 		a {
 			border: {
 				left: 0;
-				right: 1px solid #666;
+				right: 1px solid $mediumview-canadaca-divider-color;
 			}
 			padding: {
 				left: 0;
