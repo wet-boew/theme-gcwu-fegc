@@ -84,6 +84,14 @@
 		<main role="main" property="mainContentOfPage" class="{{#is secondarymenu "true"}}col-md-9 col-md-push-3{{else}}container{{/is}}">
 			<h1 id="wb-cont" property="name">{{title}}</h1>
 			{{>body}}
+{{#if datemodified}}
+			<dl id="wb-dtmd" role="contentinfo">
+				<dt>{{#i18n "tmpl-date-mod"}}{{/i18n}}</dt>
+				<dd>
+					<time>{{datemodified}}</time>
+				</dd>
+			</dl>
+{{/if}}
 		</main>
 {{#is secondarymenu "true"}}
 				<nav role="navigation" id="wb-sec" typeof="SiteNavigationElement" class="col-md-3 col-md-pull-9 visible-md visible-lg">
