@@ -8,11 +8,6 @@
   @title: Small view and under (screen only)
  */
 
-$banner-gradient-start: #4474AD;
-$banner-gradient-end: #174F88;
-$breadcrumb-bar-gradient-start: #F0EFEF;
-$breadcrumb-bar-gradient-end: #DFDFDD;
-
 %small-view-display-none {
 	display: none;
 }
@@ -33,10 +28,10 @@ $breadcrumb-bar-gradient-end: #DFDFDD;
 
 #wb-bnr {
 	background: {
-		color: $banner-gradient-end;
-		image: linear-gradient($banner-gradient-start, $banner-gradient-start, $banner-gradient-end);
+		color: $smallview-banner-gradient-end;
+		image: linear-gradient($smallview-banner-gradient-start, $smallview-banner-gradient-start, $smallview-banner-gradient-end);
 	}
-	filter: unquote("progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#{$banner-gradient-start}', endColorstr='#{$banner-gradient-end}')");
+	filter: unquote("progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#{$smallview-banner-gradient-start}', endColorstr='#{$smallview-banner-gradient-end}')");
 
 	.row {
 		margin: 0;
@@ -47,7 +42,7 @@ $breadcrumb-bar-gradient-end: #DFDFDD;
 	position: relative;
 	a {
 		font-size: 1.5em;
-		text-shadow: 0 1px 1px #044062;
+		text-shadow: 0 1px 1px $smallview-banner-text-shadow-color;
 	}
 }
 
@@ -58,18 +53,17 @@ $breadcrumb-bar-gradient-end: #DFDFDD;
 		margin: 10px 0;
 
 		a {
-			color: #FFF;
 			font-size: 1.5em;
 		}
 	}
 
 	header {
-		background-color: #174F88;
+		background-color: $smallview-menu-header-background-color;
 	}
 
 	nav {
 		a {
-			color: #000;
+			color: $smallview-menu-links-color;
 			text-decoration: none;
 		}
 	}
@@ -86,7 +80,7 @@ $breadcrumb-bar-gradient-end: #DFDFDD;
 }
 
 #wb-bc {
-	@include linear-background($breadcrumb-bar-gradient-start, $breadcrumb-bar-gradient-end);
+	@include linear-background($smallview-breadcrumb-bar-gradient-start, $smallview-breadcrumb-bar-gradient-end);
 }
 
 [dir=rtl] {
