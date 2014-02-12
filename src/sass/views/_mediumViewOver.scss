@@ -255,6 +255,47 @@ body {
 	}
 }
 
+#wb-sec {
+	> {
+		ul {
+			> {
+				li {
+					> {
+						a {
+							background: $mediumview-sec-menuitem-top-background-color;
+						}
+					}
+					
+				}
+			}
+		}
+	}
+
+	a {
+		border-radius: 0;
+		border: 1px solid $mediumview-sec-menuitem-border-color;
+		margin-top: -1px;
+		// TODO: Implement %navigation-links when libsass gets better placeholder support
+		&:link {
+			text-decoration: none;
+		}
+
+		&:hover, &:focus {
+			text-decoration: underline;
+		}
+	}
+
+	.list-group {
+		margin-bottom: 0;
+		
+		.list-group {
+			.list-group-item {
+				padding-left: 1.8em;
+			}
+		}
+	}
+}
+
 #wb-info {
 	background: $mediumview-footer-background-color url(../assets/sft-deco.gif) repeat-x scroll center top;
 
