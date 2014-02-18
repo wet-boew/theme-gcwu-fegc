@@ -67,6 +67,8 @@ body {
 #wmms {
 	@extend %brand-height;
 	@extend %float-right;
+	margin-top: 2.3em;
+	margin-right: 10px;
 }
 
 #wb-bar {
@@ -122,19 +124,28 @@ body {
 }
 
 #wb-bnr {
-	min-height: 167px;
+	> {
+		.container {
+			position: relative;
+		}
+	}
 }
 
 #wb-sttl {
-	min-height: 2em;
 	margin: {
-		top: 40px;
+		top: 5px;
 		bottom: 5px;
 	}
+	display: table-row;
 	a {
-		position: absolute; //Required to allow multiline site titles
 		font-size: 1.9em;
 		text-shadow: 1px 1px 1px $mediumview-banner-text-shadow-color;
+		display: table-cell;
+		vertical-align: middle;
+		height: 3.6em;
+		span {
+			margin-left: -15px;
+		}
 	}
 }
 
@@ -147,8 +158,9 @@ body {
 		top: 1px solid $mediumview-menubar-top-border-color;
 	}
 	padding: 11px 10px 6px 12px;
-	margin-bottom: -1px;
-	position: relative;
+	position: absolute;
+	bottom: 0;
+	right: 0;
 	z-index: 2;
 
 	input {

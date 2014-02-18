@@ -18,12 +18,16 @@
 
 #wmms {
 	position: absolute;
-	left: 0;
-	top: -2.5em;
+	top: 0.35em;
+	margin-left: 15px;
 }
 
 #gc-bar {
 	@extend %small-view-display-none;
+}
+
+#wb-bar {
+	min-height: 2.2em;
 }
 
 #wb-bnr {
@@ -32,10 +36,6 @@
 		image: linear-gradient($smallview-banner-gradient-start, $smallview-banner-gradient-start, $smallview-banner-gradient-end);
 	}
 	filter: unquote("progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#{$smallview-banner-gradient-start}', endColorstr='#{$smallview-banner-gradient-end}')");
-
-	.row {
-		margin: 0;
-	}
 }
 
 #wb-sttl {
@@ -47,14 +47,21 @@
 }
 
 #wb-glb-mn {
-	padding: 0;
-
-	> ul {
-		margin: 10px 0;
-
+	.pnl-btn {
+		position: relative;
+		float: right;
+		width: 50%;
+		z-index: 2;
+		margin-bottom: 0;
+		li {
+			padding: 3px 0 0;
+			width: 100%;
+		}
 		a {
 			color: $gc-header-footer-text-color;
 			font-size: 1.5em;
+			display: block;
+			width: 100%;
 		}
 	}
 }

@@ -53,6 +53,11 @@
 		&:hover, &:focus {
 			text-decoration: underline;
 		}
+		
+		span {
+			display: inline-block;
+			line-height: normal;
+		}
 	}
 }
 
