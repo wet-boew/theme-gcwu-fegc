@@ -217,10 +217,7 @@ body {
 	a {
 		display: block;
 		color: $mediumview-menubar-text-color;
-		font: {
-			weight: 700;
-			size: 90%;
-		}
+		font-weight: 700;
 		padding: 0.48em 1.17em 0.48em 0.79em;
 		text-decoration: none;
 	}
