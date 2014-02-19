@@ -370,7 +370,7 @@ body {
 
 	li {
 		margin: 12px 0 13px 40px;
-
+		line-height: normal;
 		&:first-child {
 			margin-left: 0;
 		}
@@ -407,7 +407,7 @@ body {
 
 #canada-ca {
 	@extend %float-right;
-
+	margin: 1em 0 !important;
 	a {
 		border-left: 1px solid $mediumview-canadaca-divider-color;
 		padding-left: 44px;
