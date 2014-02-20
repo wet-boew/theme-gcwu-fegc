@@ -87,6 +87,10 @@
 	}
 }
 
+#wb-dtmd {
+	float: right;
+}
+
 [dir=rtl] {
 	#wb-bc {
 		li {
@@ -103,5 +107,9 @@
 				}
 			}
 		}
+	}
+
+	#wb-dtmd {
+		float: left;
 	}
 }
