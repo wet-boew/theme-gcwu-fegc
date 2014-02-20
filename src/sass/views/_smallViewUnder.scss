@@ -86,6 +86,18 @@
 
 	.lng-ofr {
 		text-align: right;
+		a {
+			color: $smallview-menu-links-color;
+			text-decoration: none;
+		}
+	}
+
+	.srch-pnl {
+		.form-group {
+			float: left;
+			margin-right: 5px;
+			width: 75%;
+		}
 	}
 }
 
@@ -94,8 +106,38 @@
 }
 
 [dir=rtl] {
+	#mb-pnl {
+		.lng-ofr {
+			text-align: left;
+			ul {
+				margin-left: 0;
+			}
+			li {
+				padding-left: 0;
+				padding-right: 10px;
+			}
+		}
+		.srch-pnl {
+			.form-group {
+				float: right;
+				margin-right: auto;
+				margin-left: 5px;
+				width: 75%;
+			}
+		}
+		ul {
+			li {
+				&.no-sect {
+					padding-left: 0;
+					padding-right: 1.27em
+				}
+			}
+		}
+	}
+
 	#wmms {
-		right: 0;
+		left: auto;
+		right: 15px;
 	}
 
 	#wb-glb-mn {
@@ -103,6 +145,9 @@
 			ul {
 				text-align: left;
 			}
+		}
+		.pnl-btn {
+			float: left;
 		}
 	}
 }
