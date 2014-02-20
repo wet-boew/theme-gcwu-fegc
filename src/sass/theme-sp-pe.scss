@@ -1,0 +1,28 @@
+@charset "utf-8";
+/*!
+ *
+ * Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
+ * wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html
+ *
+ */
+
+@import "../../lib/wet-boew/src/variables";
+@import "variables";
+
+/*
+ Views
+ */
+/* All screen views */
+@media screen {
+	@import "views/splash/allScreenViews";
+}
+
+/* Small view and under */
+@media screen and (max-width: $smallViewMax) {
+	@import "views/splash/smallViewUnder";
+}
+
+/* Medium view and over */
+@media screen and (min-width: $mediumViewMin) {
+	@import "views/splash//mediumViewOver";
+}
