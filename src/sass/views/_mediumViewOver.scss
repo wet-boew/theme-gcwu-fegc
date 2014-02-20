@@ -267,40 +267,35 @@ body {
 }
 
 #wb-sec {
-	> {
-		ul {
-			> {
-				li {
-					> {
-						:first-child {
-							background: $mediumview-sec-menuitem-top-background-color;
-						}
+	margin-top: 20px;
+	padding-bottom: 2em;
+	.list-group {
+		margin-bottom: 0;
+		a {
+			&.list-group-item {
+				background: $clrWhite;
+				color: $clrDark;
+				border-radius: 0;
+				margin-top: -1px;
+				text-decoration: none;
+				%secmenu-wet-theme-menuitem-curr-hover-focus {
+					background: darken($clrWhite, 50%);
+					color: lighten($clrDark, 75%);
+				}
+				&.wb-navcurr {
+					@extend %secmenu-wet-theme-menuitem-curr-hover-focus;
+				}
+				&[href] {
+					&:hover, &:focus {
+						@extend %secmenu-wet-theme-menuitem-curr-hover-focus;
 					}
-					
 				}
 			}
 		}
-	}
-
-	a {
-		border-radius: 0;
-		border: 1px solid $mediumview-sec-menuitem-border-color;
-		margin-top: -1px;
-		// TODO: Implement %navigation-links when libsass gets better placeholder support
-		&:link {
-			text-decoration: none;
-		}
-
-		&:hover, &:focus {
-			text-decoration: underline;
-		}
-	}
-
-	.list-group {
-		margin-bottom: 0;
-		
 		.list-group {
 			.list-group-item {
+				background: darken($clrWhite, 10%);
+				color: darken($clrDark, 50%);
 				padding-left: 1.8em;
 			}
 		}
