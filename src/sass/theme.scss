@@ -9,6 +9,8 @@
 @import "../../lib/wet-boew/src/variables";
 @import "variables";
 
+@import "parts/archive";
+
 /*
  Views
  */
@@ -91,6 +93,3 @@
 @media print {
 	@import "views/printView";
 }
-
-/* Archive Style */
-#archived-bnr{background-color:#fd0}#archived-bnr p{text-align:center;margin:0}#archived-bnr a{display:block;padding:.75em 44px;color:#000;text-decoration:none;font-weight:700}#archived-bnr a:focus,#archived-bnr a:hover{text-decoration:underline}#archived-bnr .overlay-close{color:#000}
