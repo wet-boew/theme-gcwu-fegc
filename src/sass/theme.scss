@@ -91,3 +91,31 @@
 @media print {
 	@import "views/printView";
 }
+
+/*
+  @title: Archive Styles
+ */
+#archived-bnr{
+	background-color: #FD0;
+
+	p {
+		text-align: center;
+		margin: 0;
+	}
+
+	a {
+		display: block;
+		padding: 0.75em 44px;
+		color: #000;
+		text-decoration: none;
+		font-weight: 700;
+
+		&:focus, &:hover {
+			text-decoration: underline;
+		}
+	}
+
+	.overlay-close{
+		color:#000
+	}
+}
