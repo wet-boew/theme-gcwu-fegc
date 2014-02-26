@@ -248,7 +248,7 @@ module.exports = ->
 						expand: true
 						cwd: "site/pages"
 						src: [
-							"*.hbs"
+							"**/*.hbs"
 						]
 						dest: "dist/unmin"
 					,
