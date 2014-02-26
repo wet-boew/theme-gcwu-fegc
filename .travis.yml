@@ -6,9 +6,6 @@ env:
   global:
     - secure: "HXzNqJOI0hvzsfRZ0eIdlQAJeF7bmaDf08DEaPI01o4pwxECLTmIdbUP7AiHw3HeYF27Ty6uTotmPLA6PJXy6ekuWpANS3SltHWErn+emQjD7A5aOABhtGSF1Cb/OdmYAxR1SAjLxN1e47vhgW548SQK6LI1MxXbyoZPFoV1O/E="
 
-before_install:
-  - sudo apt-get update && sudo apt-get install git
-
 install:
   - scripts/setup
 
