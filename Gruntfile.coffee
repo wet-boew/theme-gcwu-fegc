@@ -288,7 +288,7 @@ module.exports = ->
 						expand: true
 						cwd: "site/pages"
 						src: [
-							"*.hbs",
+							"**/*.hbs",
 							"!index.hbs"
 						]
 						dest: "dist"
