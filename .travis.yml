@@ -4,7 +4,7 @@ node_js:
 
 env:
   global:
-    - secure: "oGebLX8vLUkchZPBzr9BjMOCumBf+rtDCy0OBrgCuD1Redqhlv/RPg40UPhRrmeQNRmQj2DGwBbNnL3w38TQO4/1BtilviMwRbkE6Bd0kZi9eOBdvJ9lbGlwjUhiSulX7xSG+Z2sJhiW5LEwp84mr5HrC0AKh+UNnFaKrSdZb8o="
+    - secure: "HXzNqJOI0hvzsfRZ0eIdlQAJeF7bmaDf08DEaPI01o4pwxECLTmIdbUP7AiHw3HeYF27Ty6uTotmPLA6PJXy6ekuWpANS3SltHWErn+emQjD7A5aOABhtGSF1Cb/OdmYAxR1SAjLxN1e47vhgW548SQK6LI1MxXbyoZPFoV1O/E="
 
 before_install:
   - sudo apt-get update && sudo apt-get install git
