@@ -1,6 +1,6 @@
 {
   "name": "theme-gcwu-fegc",
-  "version": "4.0.0-b2",
+  "version": "4.0.0-rc1-development",
   "scripts": {
     "test": "grunt",
     "postinstall": "bower update && cd lib/wet-boew && npm install"
