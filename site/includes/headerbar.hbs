@@ -8,7 +8,7 @@
 {{#is headerbar.officiallanguage "true"}}
 	<li><a href="http://www.canada.ca/{{language}}/index.html" rel="external">Canada.ca</a></li>
 	<li><a href="http://www.canada.ca/{{language}}/services/index.html" rel="external">{{#i18n "tmpl-services"}}{{/i18n}}</a></li>
-	<li><a href="http://www.canada.ca/{{language}}/gov/dept/index.html" rel="external">{{#i18n "tmpl-depts"}}{{/i18n}}</a></li>
+	<li><a href="http://www.canada.ca/{{language}}/{{#i18n "tmpl-gov-url"}}{{/i18n}}/{{#i18n "tmpl-dept-url"}}{{/i18n}}/index.html" rel="external">{{#i18n "tmpl-depts"}}{{/i18n}}</a></li>
 {{/is}}
 {{#isnt languagetoggle "false"}}
 	{{>languagetoggle}}
