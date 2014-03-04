@@ -77,6 +77,7 @@ module.exports = ->
 		"INTERNAL: Process non-CSS/JS assets to dist"
 		[
 			"copy:assets_min"
+			"copy:wetboew_demo_min"
 		]
 	)
 
@@ -85,6 +86,7 @@ module.exports = ->
 		"INTERNAL: Process non-CSS/JS assets to dist"
 		[
 			"copy:assets"
+			"copy:wetboew_demo"
 		]
 	)
 
@@ -125,6 +127,16 @@ module.exports = ->
 					"!unmin/theme/**/*.*"
 					"!**/logo.*"
 				]
+				dest: "dist/"
+			wetboew_demo:
+				expand: true
+				cwd: "lib/wet-boew/dist/unmin"
+				src: "demos/**/demo/*.*"
+				dest: "dist/unmin/"
+			wetboew_demo_min:
+				expand: true
+				cwd: "lib/wet-boew/dist"
+				src: "demos/**/demo/*.*"
 				dest: "dist/"
 			assets:
 				expand: true
