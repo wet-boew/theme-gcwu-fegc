@@ -8,5 +8,8 @@
 	"tmpl-jobs": "Jobs",
 	"tmpl-jobs-url": "jobbank.gc.ca",
 	"tmpl-economy": "Economy",
-	"tmpl-economy-url": "actionplan.gc.ca"
+	"tmpl-economy-url": "actionplan.gc.ca",
+	"tmpl-home-url": "home",
+	"tmpl-gov-url": "gov",
+	"tmpl-dept-url": "dept"
 }
