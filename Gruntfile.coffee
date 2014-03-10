@@ -182,42 +182,23 @@ module.exports = ->
 					"ios 5"
 				]
 			all:
-				cwd: "dist/css"
+				cwd: "dist/unmin/css"
 				src: [
-					"**/*.css"
-					"!**/*.min.css"
+					"*theme*.css"
 				]
-				dest: "dist/css"
+				dest: "dist/unmin/css"
 				expand: true
-				flatten: true
 
 		cssmin:
-			options:
-				banner: "/*!\n * Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)\n * wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html\n" +
-						" * <%= pkg.version %> - " + "<%= grunt.template.today(\"yyyy-mm-dd\") %>\n *\n */"
-			dist:
-				cwd: "dist/unmin/css"
-				src: [
-					"**/*.css"
-					"!**/wet-boew.css"
-					"!**/ie8-wet-boew.css"
-					"!**/*.min.css"
-				]
-				ext: ".min.css"
-				dest: "dist/css"
-				expand: true
-
-			distWET:
+			theme:
 				options:
-					banner: ""
-				cwd: "dist/unmin/css"
-				src: [
-					"**/wet-boew.css"
-					"**/ie8-wet-boew.css"
-				]
+					banner: "<%= banner %>"
+				expand: true
+				cwd: "dist/unmin/css/"
+				src: "*theme*.css"
 				ext: ".min.css"
 				dest: "dist/css"
-				expand: true
+
 
 		# Minify
 		uglify:
@@ -225,8 +206,8 @@ module.exports = ->
 				options:
 					banner: "<%= banner %>"
 				expand: true
-				cwd: "dist/unmin/js/"
-				src: ["*.js"]
+				cwd: "src/js/"
+				src: "<%= copy.js.src %>"
 				dest: "dist/js/"
 				ext: ".min.js"
 
