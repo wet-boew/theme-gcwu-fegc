@@ -84,7 +84,39 @@
 		}
 	}
 
+	.modal-body {
+		background: #efefef;
+		padding: 0;
+	}
+
+	%gcwu-theme-site-menu-mb-pnl-padding-10-20 {
+		padding: 10px 20px;
+	}
+	.srch-pnl {
+		@extend %gcwu-theme-site-menu-mb-pnl-padding-10-20;
+		.form-group {
+			float: left;
+			margin-right: 5px;
+			width: 75%;
+		}
+	}
+
+	%small-view-under-color-fff {
+		color: #fff;
+	}
+	#wb-srch-sub-imprt {
+		background: #146094;
+		border-color: #146094;
+		@extend %small-view-under-color-fff;
+		&:hover, &:focus, &:active {
+			background-color: #3276B1;
+			border-color: #285E8E;
+			@extend %small-view-under-color-fff;
+		}
+	}
+
 	.lng-ofr {
+		@extend %gcwu-theme-site-menu-mb-pnl-padding-10-20;
 		text-align: right;
 		a {
 			color: $smallview-menu-links-color;
@@ -92,12 +124,27 @@
 		}
 	}
 
-	.srch-pnl {
-		.form-group {
-			float: left;
-			margin-right: 5px;
-			width: 75%;
+	.sec-pnl {
+		@extend %small-view-under-bg-color-fff;
+		@extend %gcwu-theme-site-menu-mb-pnl-padding-10-20;
+	}
+
+	.sm-pnl {
+		background: #146094;
+		@extend %gcwu-theme-site-menu-mb-pnl-padding-10-20;
+		a {
+			@extend %small-view-under-color-fff;
 		}
+		summary {
+			@extend %small-view-under-color-fff;
+			&:hover, &:focus {
+				@extend %small-view-under-color-fff;
+			}
+		}
+	}
+
+	.info-pnl {
+		@extend %gcwu-theme-site-menu-mb-pnl-padding-10-20;
 	}
 }
 
