@@ -66,6 +66,12 @@
 	}
 }
 
+%gcwu-theme-site-menu-mb-pnl-padding-10-20 {
+	padding: 10px 20px;
+}
+%small-view-under-color-fff {
+	color: #fff;
+}
 #mb-pnl {
 	header {
 		background-color: $smallview-menu-header-background-color;
@@ -89,9 +95,6 @@
 		padding: 0;
 	}
 
-	%gcwu-theme-site-menu-mb-pnl-padding-10-20 {
-		padding: 10px 20px;
-	}
 	.srch-pnl {
 		@extend %gcwu-theme-site-menu-mb-pnl-padding-10-20;
 		.form-group {
@@ -101,9 +104,6 @@
 		}
 	}
 
-	%small-view-under-color-fff {
-		color: #fff;
-	}
 	#wb-srch-sub-imprt {
 		background: #146094;
 		border-color: #146094;
