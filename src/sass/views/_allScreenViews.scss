@@ -17,6 +17,10 @@
 	padding: 0;
 }
 
+%all-view-navigation-links {
+	@include navigation-links;
+}
+
 .wb-slc {
 	a {
 		color: #FFF;
@@ -42,20 +46,11 @@
 }
 
 #wb-sttl {
+	@extend %all-view-navigation-links;
 	a {
 		color: #FFFFFF !important;
 
-		// TODO: Implement %navigation-links when libsass gets better placeholder support
-		&:link {
-			text-decoration: none;
-		}
-
-		&:hover, &:focus {
-			text-decoration: underline;
-		}
-		
 		span {
-			display: inline-block;
 			line-height: normal;
 		}
 	}
