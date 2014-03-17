@@ -72,7 +72,9 @@
 %small-view-under-color-fff {
 	color: #fff;
 }
+$gcwu-theme-mb-pnl-bg: #efefef;
 #mb-pnl {
+	background: $gcwu-theme-mb-pnl-bg;
 	header {
 		background-color: $smallview-menu-header-background-color;
 	}
@@ -91,7 +93,7 @@
 	}
 
 	.modal-body {
-		background: #efefef;
+		background: $gcwu-theme-mb-pnl-bg;
 		padding: 0;
 	}
 
