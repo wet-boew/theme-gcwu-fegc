@@ -48,3 +48,15 @@ $mediumview-canadaca-divider-color: #666;
 	}
 	filter: unquote("progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#{$start-color}', endColorstr='#{$end-color}')");
 }
+
+@mixin navigation-links {
+	a {
+		&:link {
+			text-decoration: none;
+		}
+
+		&:hover, &:focus {
+			text-decoration: underline;
+		}
+	}
+}
