@@ -189,16 +189,10 @@ body {
 				> {
 					li {
 						padding: 0;
-						border: {
-							left: 1px solid $mediumview-menuitem-left-border-color;
-							right: 1px solid $mediumview-menuitem-left-border-color;
-						}
+						border-right: 1px solid $mediumview-menuitem-left-border-color;
 
 						&.active {
-							border: {
-								left-color: $mediumview-menuitem-hover-border-color;
-								right-color: $mediumview-menuitem-hover-border-color;
-							}
+							border-right-color: $mediumview-menuitem-hover-border-color;
 						}
 					}
 				}
