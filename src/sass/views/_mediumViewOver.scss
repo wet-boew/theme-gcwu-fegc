@@ -226,7 +226,6 @@ body {
 			bottom: 4px solid $mediumview-submenu-bottom-border-color;
 			radius: 0 0 3px 3px;
 		}
-		box-shadow: 0 5px 5px -4px $mediumview-submenu-shadow-color, 5px 5px 5px -4px $mediumview-submenu-shadow-color, -5px 5px 5px -4px $mediumview-submenu-shadow-color;
 
 		a {
 			@extend %submenu-colors;
