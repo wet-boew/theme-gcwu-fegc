@@ -66,9 +66,6 @@
 	}
 }
 
-%gcwu-theme-site-menu-mb-pnl-padding-10-20 {
-	padding: 10px 20px;
-}
 %small-view-under-color-fff {
 	color: #fff;
 }
@@ -98,7 +95,6 @@ $gcwu-theme-mb-pnl-bg: #efefef;
 	}
 
 	.srch-pnl {
-		@extend %gcwu-theme-site-menu-mb-pnl-padding-10-20;
 		.form-group {
 			float: left;
 			margin-right: 5px;
@@ -118,8 +114,6 @@ $gcwu-theme-mb-pnl-bg: #efefef;
 	}
 
 	.lng-ofr {
-		@extend %gcwu-theme-site-menu-mb-pnl-padding-10-20;
-		text-align: right;
 		a {
 			color: $smallview-menu-links-color;
 			text-decoration: none;
@@ -128,12 +122,10 @@ $gcwu-theme-mb-pnl-bg: #efefef;
 
 	.sec-pnl {
 		@extend %small-view-under-bg-color-fff;
-		@extend %gcwu-theme-site-menu-mb-pnl-padding-10-20;
 	}
 
 	.sm-pnl {
 		background: #146094;
-		@extend %gcwu-theme-site-menu-mb-pnl-padding-10-20;
 		a {
 			@extend %small-view-under-color-fff;
 		}
@@ -144,10 +136,6 @@ $gcwu-theme-mb-pnl-bg: #efefef;
 			}
 		}
 	}
-
-	.info-pnl {
-		@extend %gcwu-theme-site-menu-mb-pnl-padding-10-20;
-	}
 }
 
 #wb-bc {
@@ -156,30 +144,12 @@ $gcwu-theme-mb-pnl-bg: #efefef;
 
 [dir=rtl] {
 	#mb-pnl {
-		.lng-ofr {
-			text-align: left;
-			ul {
-				margin-left: 0;
-			}
-			li {
-				padding-left: 0;
-				padding-right: 10px;
-			}
-		}
 		.srch-pnl {
 			.form-group {
 				float: right;
 				margin-right: auto;
 				margin-left: 5px;
 				width: 75%;
-			}
-		}
-		ul {
-			li {
-				&.no-sect {
-					padding-left: 0;
-					padding-right: 1.27em
-				}
 			}
 		}
 	}
