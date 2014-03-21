@@ -38,19 +38,9 @@
 	float: right;
 }
 
-// TODO: Implement when libsass gets better placeholder support
-// %navigation-links {
-//	a {
-//		&:link {
-//			text-decoration: none;
-//		}
-//
-//		&:hover, &:focus {
-//			text-decoration: underline;
-//		}
-//	}
-//}
-//
+%medium-view-navigation-links {
+	@include navigation-links;
+}
 
 body {
 	background: {
@@ -78,6 +68,7 @@ body {
 
 #gc-bar {
 	@extend %float-right;
+	@extend %medium-view-navigation-links;
 	margin: 15px 10px;
 
 	li {
@@ -87,15 +78,6 @@ body {
 	a {
 		border-left: 1px solid $gc-header-footer-divider-color;
 		padding: 0 0.5em;
-
-		// TODO: Implement %navigation-links when libsass gets better placeholder support
-		&:link {
-			text-decoration: none;
-		}
-
-		&:hover, &:focus {
-			text-decoration: underline;
-		}
 	}
 
 	> {
@@ -216,6 +198,7 @@ body {
 
 	.sm {
 		@extend %submenu-colors;
+		@extend %medium-view-navigation-links;
 		border: {
 			bottom: 4px solid $mediumview-submenu-bottom-border-color;
 			radius: 0 0 3px 3px;
@@ -224,15 +207,6 @@ body {
 		a {
 			@extend %submenu-colors;
 			font-weight: 400;
-
-			// TODO: Implement %navigation-links when libsass gets better placeholder support
-			&:link {
-				text-decoration: none;
-			}
-
-			&:hover, &:focus {
-				text-decoration: underline;
-			}
 		}
 	}
 }
@@ -308,6 +282,7 @@ body {
 }
 
 #wb-info {
+	@extend %medium-view-navigation-links;
 	background: $mediumview-footer-background-color url(../assets/sft-deco.gif) repeat-x scroll center top;
 
 	> {
@@ -339,19 +314,6 @@ body {
 
 	li {
 		line-height: 2;
-	}
-
-	a {
-		color: #000;
-
-		// TODO: Implement %navigation-links when libsass gets better placeholder support
-		&:link {
-			text-decoration: none;
-		}
-
-		&:hover, &:focus {
-			text-decoration: underline;
-		}
 	}
 }
 
