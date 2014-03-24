@@ -156,6 +156,10 @@ body {
 	}
 }
 
+%gcwu-theme-wb-sm-wb-navcurr {
+	background: #0F315B;
+	color: #fff;
+}
 #wb-sm {
 	margin-top: -1px;
 	.nvbar {
@@ -172,7 +176,13 @@ body {
 					li {
 						padding: 0;
 						border-right: 1px solid $mediumview-menuitem-left-border-color;
-
+						> {
+							a {
+								&.wb-navcurr {
+									@extend %gcwu-theme-wb-sm-wb-navcurr;
+								}
+							}
+						}
 						&.active {
 							border-right-color: $mediumview-menuitem-hover-border-color;
 						}
@@ -207,6 +217,17 @@ body {
 		a {
 			@extend %submenu-colors;
 			font-weight: 400;
+
+			// TODO: Implement %navigation-links when libsass gets better placeholder support
+			&:link {
+				text-decoration: none;
+			}
+			&.wb-navcurr {
+				@extend %gcwu-theme-wb-sm-wb-navcurr;
+			}
+			&:hover, &:focus {
+				text-decoration: underline;
+			}
 		}
 	}
 }
