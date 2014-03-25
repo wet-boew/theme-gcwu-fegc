@@ -7,10 +7,10 @@
 		<meta charset="utf-8" />
 		<!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
 		wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
-		<title>{{title}} - {{#i18n "site.title"}}{{/i18n}}</title>
+		<title>{{title}} - {{i18n "site.title"}}</title>
 		<meta content="width=device-width, initial-scale=1" name="viewport" />
 		<!-- Meta data -->
-		<meta name="description" content="{{#i18n "site.description"}}{{/i18n}}" />
+		<meta name="description" content="{{i18n "site.description"}}" />
 		<!-- Meta data-->
 		{{>splashresources}}
 
@@ -18,7 +18,7 @@
 	<body vocab="http://schema.org/" typeof="WebPage">
 		<header role="banner">
 			<div id="wb-bnr" class="container">
-				<object id="gcwu-sig" type="image/svg+xml" tabindex="-1" role="img" data="{{assets}}/assets/sig-alt-{{language}}.svg" aria-label="{{#i18n "tmpl-gc-sig"}}{{/i18n}}"></object>
+				<object id="gcwu-sig" type="image/svg+xml" tabindex="-1" role="img" data="{{assets}}/assets/sig-alt-{{language}}.svg" aria-label="{{i18n "tmpl-gc-sig"}}"></object>
 			</div>
 		</header>
 		<main role="main" property="mainContentOfPage" class="container">
@@ -27,7 +27,7 @@
 			</div>
 		</main>
 		<footer role="contentinfo" class="container">
-			<object id="wmms" type="image/svg+xml" tabindex="-1" role="img" data="{{assets}}/assets/wmms-alt.svg" aria-label="{{#i18n "tmpl-gc-wmms"}}{{/i18n}}"></object>
+			<object id="wmms" type="image/svg+xml" tabindex="-1" role="img" data="{{assets}}/assets/wmms-alt.svg" aria-label="{{i18n "tmpl-gc-wmms"}}"></object>
 		</footer>
 		{{>footerresources}}
 		{{#if environment.test}}{{>test}}{{/if}}
