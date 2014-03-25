@@ -5,11 +5,11 @@
 ---
 <ul class="list-inline">
 {{#is gcfooter.officiallanguage "true"}}
-	<li><a href="http://{{#i18n "tmpl-health-url"}}{{/i18n}}"><span>{{#i18n "tmpl-health"}}{{/i18n}}</span>{{#i18n "tmpl-health-url"}}{{/i18n}}</a></li>
-	<li><a href="http://{{#i18n "tmpl-travel-url"}}{{/i18n}}"><span>{{#i18n "tmpl-travel"}}{{/i18n}}</span>{{#i18n "tmpl-travel-url"}}{{/i18n}}</a></li>
-	<li><a href="http://www.servicecanada.gc.ca/{{#i18n "lang-code-iso-639-2"}}{{/i18n}}/{{#i18n "tmpl-home-url"}}{{/i18n}}.shtml"><span>{{#i18n "tmpl-servicecanada"}}{{/i18n}}</span>{{#i18n "tmpl-servicecanada-url"}}{{/i18n}}</a></li>
-	<li><a href="http://www.{{#i18n "tmpl-jobs-url"}}{{/i18n}}"><span>{{#i18n "tmpl-jobs"}}{{/i18n}}</span>{{#i18n "tmpl-jobs-url"}}{{/i18n}}</a></li>
-	<li><a href="http://{{#i18n "tmpl-economy-url"}}{{/i18n}}/{{language}}"><span>{{#i18n "tmpl-economy"}}{{/i18n}}</span>{{#i18n "tmpl-economy-url"}}{{/i18n}}</a></li>
+	<li><a href="http://{{i18n "tmpl-health-url"}}"><span>{{i18n "tmpl-health"}}</span>{{i18n "tmpl-health-url"}}</a></li>
+	<li><a href="http://{{i18n "tmpl-travel-url"}}"><span>{{i18n "tmpl-travel"}}</span>{{i18n "tmpl-travel-url"}}</a></li>
+	<li><a href="http://www.servicecanada.gc.ca/{{i18n "lang-code-iso-639-2"}}/{{i18n "tmpl-home-url"}}.shtml"><span>{{i18n "tmpl-servicecanada"}}</span>{{i18n "tmpl-servicecanada-url"}}</a></li>
+	<li><a href="http://www.{{i18n "tmpl-jobs-url"}}"><span>{{i18n "tmpl-jobs"}}</span>{{i18n "tmpl-jobs-url"}}</a></li>
+	<li><a href="http://{{i18n "tmpl-economy-url"}}/{{language}}"><span>{{i18n "tmpl-economy"}}</span>{{i18n "tmpl-economy-url"}}</a></li>
 {{/is}}
 	<li id="canada-ca"><a href="http://www.canada.ca/{{#is gcfooter.officiallanguage "true"}}{{language}}/index.html{{/is}}">Canada.ca</a></li>
 </ul>
