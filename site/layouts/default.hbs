@@ -11,7 +11,7 @@
 		<link rel="schema.dcterms" href="http://purl.org/dc/terms/">
 		<meta content="width=device-width, initial-scale=1" name="viewport" />
 		<!-- Meta data -->
-		<meta name="description" content="{{#if page.description }}{{page.description}}{{else}}{{#i18n "site.description"}}{{/i18n}}{{/if}}" />
+		<meta name="description" content="{{#if page.description }}{{page.description}}{{else}}{{i18n "site.description"}}{{/if}}" />
 		{{>metadata}}
 		<!-- Meta data-->
 		{{>headresources}}
@@ -19,16 +19,16 @@
 	<body vocab="http://schema.org/" typeof="WebPage">
 		<ul id="wb-tphp">
 			<li class="wb-slc">
-				<a class="wb-sl" href="#wb-cont">{{#i18n "tmpl-skip-cont"}}{{/i18n}}</a>
+				<a class="wb-sl" href="#wb-cont">{{i18n "tmpl-skip-cont"}}</a>
 			</li>
 {{#isnt footer "false"}}
 			<li class="wb-slc visible-md visible-lg">
-				<a class="wb-sl" href="#wb-info">{{#i18n "tmpl-skip-info"}}{{/i18n}}</a>
+				<a class="wb-sl" href="#wb-info">{{i18n "tmpl-skip-info"}}</a>
 			</li>
 {{/isnt}}
 {{#is secondarymenu "true"}}
 			<li class="wb-slc visible-md visible-lg">
-				<a class="wb-sl" href="#wb-sec">{{#i18n "tmpl-skip-sec"}}{{/i18n}}</a>
+				<a class="wb-sl" href="#wb-sec">{{i18n "tmpl-skip-sec"}}</a>
 			</li>
 {{/is}}
 		</ul>
@@ -40,7 +40,7 @@
 							{{>headerbar}}
 {{#isnt mobimenu "false"}}
 							<section class="wb-mb-links col-xs-12 visible-sm visible-xs" id="wb-glb-mn">
-								<h2>{{#i18n "menu"}}{{/i18n}}</h2>
+								<h2>{{i18n "menu"}}</h2>
 								{{>mobimenu}}
 							</section>
 {{/isnt}}
@@ -56,7 +56,7 @@
 						{{>wordmark}}
 {{#isnt sitesearch "false"}}
 						<section id="wb-srch" class="visible-md visible-lg">
-							<h2>{{#i18n "tmpl-search"}}{{/i18n}}</h2>
+							<h2>{{i18n "tmpl-search"}}</h2>
 							{{>sitesearch}}
 						</section>
 {{/isnt}}
@@ -72,7 +72,7 @@
 {{/isnt}}
 {{#isnt breadcrumb "false"}}
 			<nav role="navigation" id="wb-bc" property="breadcrumb">
-				<h2>{{#i18n "you-are-here"}}{{/i18n}}</h2>
+				<h2>{{i18n "you-are-here"}}</h2>
 				{{>breadcrumbs}}
 			</nav>
 {{/isnt}}
@@ -92,7 +92,7 @@
 		</main>
 {{#is secondarymenu "true"}}
 				<nav role="navigation" id="wb-sec" typeof="SiteNavigationElement" class="col-md-3 col-md-pull-9 visible-md visible-lg">
-					<h2>{{#i18n "tmpl-sec-menu"}}{{/i18n}}</h2>
+					<h2>{{i18n "tmpl-sec-menu"}}</h2>
 					{{>secondarymenu}}
 				</nav>
 			</div>
@@ -103,7 +103,7 @@
 		<footer role="contentinfo" id="wb-info" class="visible-md visible-lg">
 			<div class="container">
 				<nav role="navigation">
-					<h2>{{#i18n "tmpl-site-info"}}{{/i18n}}</h2>
+					<h2>{{i18n "tmpl-site-info"}}</h2>
 					{{>notices}}
 					<div class="row">
 						{{>footer}}
@@ -113,7 +113,7 @@
 			<div id="gc-info">
 				<div class="container">
 					<nav role="navigation">
-						<h2>{{#i18n "tmpl-gc-foot"}}{{/i18n}}</h2>
+						<h2>{{i18n "tmpl-gc-foot"}}</h2>
 						{{>gcfooter}}
 					</nav>
 				</div>
