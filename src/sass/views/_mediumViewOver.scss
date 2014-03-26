@@ -305,6 +305,26 @@ body {
 	}
 }
 
+#wb-info {
+	> {
+		.container {
+			> {
+				:before {
+					@extend %page-background;
+					background: transparent;
+					content: " ";
+					margin: {
+						left: -15px;
+						right: -15px;
+					}
+					display: block;
+					height: 25px;
+				}
+			}
+		}
+	}
+}
+
 #gc-info {
 	background-color: $gc-header-footer-background-color;
 	margin-top: 10px;
