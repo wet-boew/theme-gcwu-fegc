@@ -39,36 +39,6 @@
 	}
 }
 
-#gc-info {
-	background-color: $gc-header-footer-background-color;
-	margin-top: 10px;
-
-	ul {
-		margin: 0;
-	}
-
-	li {
-		margin: 12px 0 13px 40px;
-		line-height: normal;
-		&:first-child {
-			margin-left: 0;
-		}
-	}
-
-	a {
-		color: $gc-header-footer-text-color;
-		span {
-			font-weight: 700;
-			text-transform: uppercase;
-
-			&:after {
-				content:"\a";
-				white-space: pre;
-			}
-		}
-	}
-}
-
 #gc-tctr {
 	padding: {
 		top: 5px;
@@ -85,33 +55,11 @@
 	}
 }
 
-#canada-ca {
-	@extend %float-right;
-	margin: 1em 0 !important;
-	padding-right: 0;
-	a {
-		border-left: 1px solid $mediumview-canadaca-divider-color;
-		padding-left: 44px;
-		display: inline-block;
-		vertical-align: middle;
-		font-size: 160%
-	}
+#gc-info {
+	display: none;
 }
 
 [dir=rtl] {
-	#gc-info {
-		ul {
-			padding-right: 0;
-		}
-		li {
-			margin: 12px 40px 13px 0;
-
-			&:first-child {
-				margin-right: 0;
-			}
-		}
-	}
-
 	#gc-tctr {
 		> {
 			:first-child {
@@ -123,22 +71,6 @@
 					left: 10px;
 					right: 0;
 				}
-			}
-		}
-	}
-
-	#canada-ca {
-		@extend %float-left;
-		padding-right: 0;
-		padding-left: 5px;
-		a {
-			border: {
-				left: 0;
-				right: 1px solid $mediumview-canadaca-divider-color;
-			}
-			padding: {
-				left: 0;
-				right: 44px;
 			}
 		}
 	}
