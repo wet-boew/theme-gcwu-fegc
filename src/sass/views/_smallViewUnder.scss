@@ -143,6 +143,10 @@ $gcwu-theme-mb-pnl-bg: #efefef;
 	@include linear-background($smallview-breadcrumb-bar-gradient-start, $smallview-breadcrumb-bar-gradient-end);
 }
 
+#gc-info {
+	display: none;
+}
+
 [dir=rtl] {
 	#mb-pnl {
 		.srch-pnl {
