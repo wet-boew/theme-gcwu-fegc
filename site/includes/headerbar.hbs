@@ -3,12 +3,12 @@
 	"officiallanguage": "<%= language === 'en' || language === 'fr' %>"
 }
 ---
-<object id="gcwu-sig" type="image/svg+xml" tabindex="-1" role="img" data="{{assets}}/assets/sig-{{#is headerbar.officiallanguage "true"}}{{language}}{{else}}{{site.defaultLanguage}}{{/is}}.svg" aria-label="{{i18n "tmpl-gc-sig"}}"></object>
+<object id="gcwu-sig" type="image/svg+xml" tabindex="-1" role="img" data="{{assets}}/assets/sig-{{#is headerbar.officiallanguage "true"}}{{language}}{{else}}{{site.defaultLanguage}}{{/is}}.svg" aria-label="{{{i18n "tmpl-gc-sig"}}}"></object>
 <ul id="gc-bar" class="list-inline">
 {{#is headerbar.officiallanguage "true"}}
 	<li><a href="http://www.canada.ca/{{language}}/index.html" rel="external">Canada.ca</a></li>
-	<li><a href="http://www.canada.ca/{{language}}/services/index.html" rel="external">{{i18n "tmpl-services"}}</a></li>
-	<li><a href="http://www.canada.ca/{{language}}/{{i18n "tmpl-gov-url"}}/{{i18n "tmpl-dept-url"}}/index.html" rel="external">{{i18n "tmpl-depts"}}</a></li>
+	<li><a href="http://www.canada.ca/{{language}}/services/index.html" rel="external">{{{i18n "tmpl-services"}}}</a></li>
+	<li><a href="http://www.canada.ca/{{language}}/{{{i18n "tmpl-gov-url"}}}/{{{i18n "tmpl-dept-url"}}}/index.html" rel="external">{{{i18n "tmpl-depts"}}}</a></li>
 {{/is}}
 {{#isnt languagetoggle "false"}}
 	{{>languagetoggle}}
