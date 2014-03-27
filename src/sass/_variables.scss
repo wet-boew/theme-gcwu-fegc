@@ -29,7 +29,7 @@ $mediumview-menubar-bottom-border-color: $mediumview-submenu-background-color;
 $mediumview-menuitem-left-border-color: #999;
 $mediumview-menuitem-hover-border-color: $mediumview-menubar-bottom-border-color;
 $mediumview-search-button-gradient-start: #F0F0F0;
-$mediumview-search-button-gradient-end: #CCC;
+$mediumview-search-button-gradient-end: #CCCCCC; /* Shorthand can't be used because it doesn't work with IE 8 & 9 gradients */
 $mediumview-page-border-color: #CCC;
 $mediumview-sec-menuitem-top-background-color: #DDD;
 $mediumview-sec-menuitem-border-color: #CCC;
