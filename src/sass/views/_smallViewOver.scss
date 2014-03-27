@@ -18,7 +18,7 @@
 			> {
 				:before {
 					@extend %page-background;
-					background: transparent;
+					background: transparent!important;
 					content: " ";
 					margin: {
 						left: -15px;
