@@ -7,6 +7,7 @@
 /*
   @title: Small view and over (screen only)
  */
+
 #wb-info {
 	@include navigation-links;
 	background: $mediumview-footer-background-color url(../assets/sft-deco.gif) repeat-x scroll center top;
@@ -14,20 +15,6 @@
 	> {
 		.container {
 			background: transparent url(../assets/sft-deco-leaf.gif) no-repeat top center;
-
-			> {
-				:before {
-					@extend %page-background;
-					background: transparent;
-					content: " ";
-					margin: {
-						left: -15px;
-						right: -15px;
-					}
-					display: block;
-					height: 25px;
-				}
-			}
 		}
 	}
 
@@ -53,10 +40,6 @@
 			line-height: 1.5
 		}
 	}
-}
-
-#gc-info {
-	display: none;
 }
 
 [dir=rtl] {
