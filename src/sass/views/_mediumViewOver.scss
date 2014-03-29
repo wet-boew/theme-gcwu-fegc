@@ -214,7 +214,7 @@ body {
 			radius: 0 0 3px 3px;
 		}
 
-		a {
+		a, summary {
 			@extend %submenu-colors;
 			font-weight: 400;
 
