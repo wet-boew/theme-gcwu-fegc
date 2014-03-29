@@ -193,12 +193,12 @@ body {
 	}
 
 	.active {
-		a {
+		a, summary {
 			@extend %submenu-colors;
 		}
 	}
 	
-	a {
+	a, summary {
 		display: block;
 		color: $mediumview-menubar-text-color;
 		font-weight: 700;
