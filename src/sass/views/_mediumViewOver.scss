@@ -93,14 +93,10 @@ body {
 
 	ul {
 		li {
-			a {
-				border-right: 1px solid $gc-header-footer-divider-color;
-			}
-
 			&:last-child {
-				a {
-					border-right: 0;
-				}
+			a {
+				border-right: 0;
+			}
 			}
 		}
 	}
@@ -444,4 +440,3 @@ body {
 		}
 	}
 }
-
