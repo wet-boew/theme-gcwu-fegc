@@ -116,6 +116,7 @@ body {
 		bottom: 5px;
 	}
 	display: table-row;
+
 	a {
 		font-size: 1.9em;
 		text-shadow: 1px 1px 1px $mediumview-banner-text-shadow-color;
@@ -218,13 +219,16 @@ body {
 			&:link {
 				text-decoration: none;
 			}
+
 			&.wb-navcurr {
 				@extend %gcwu-theme-wb-sm-wb-navcurr;
 			}
+
 			&:hover, &:focus {
 				text-decoration: underline;
 			}
 		}
+
 		.slflnk {
 			background: #bbb;
 		}
@@ -257,6 +261,7 @@ body {
 	background: darken($clrWhite, 50%);
 	color: lighten($clrDark, 75%);
 }
+
 #wb-sec {
 	margin-top: 20px;
 	padding-bottom: 2em;
@@ -265,15 +270,16 @@ body {
 		margin: 0;
 		border: 1px solid #ddd;
 		border-bottom: 3px solid #666;
-		line-height: 0.8;
+		font-size: 1em;
+
 		a {
 			color: #333;
-			font-size: 0.7em;
-			text-decoration:none;
+			text-decoration: none;
 		}
 	}
 	.list-group {
 		margin-bottom: 0;
+
 		a {
 			&.list-group-item {
 				background: $clrWhite;
@@ -281,9 +287,11 @@ body {
 				border-radius: 0;
 				margin-top: -1px;
 				text-decoration: none;
+
 				&.wb-navcurr {
 					@extend %secmenu-wet-theme-menuitem-curr-hover-focus;
 				}
+
 				&[href] {
 					&:hover, &:focus {
 						@extend %secmenu-wet-theme-menuitem-curr-hover-focus;
@@ -291,6 +299,7 @@ body {
 				}
 			}
 		}
+
 		.list-group {
 			.list-group-item {
 				background: darken($clrWhite, 10%);
@@ -332,6 +341,7 @@ body {
 	li {
 		margin: 12px 0 13px 40px;
 		line-height: normal;
+
 		&:first-child {
 			margin-left: 0;
 		}
@@ -339,6 +349,7 @@ body {
 
 	a {
 		color: $gc-header-footer-text-color;
+
 		span {
 			font-weight: 700;
 			text-transform: uppercase;
@@ -355,6 +366,7 @@ body {
 	@extend %float-right;
 	margin: 1em 0 !important;
 	padding-right: 0;
+
 	a {
 		border-left: 1px solid $mediumview-canadaca-divider-color;
 		padding-left: 44px;
@@ -390,6 +402,7 @@ body {
 
 		> {
 			&:first-child {
+
 				a {
 					border-right: 0;
 				}
@@ -398,6 +411,7 @@ body {
 
 		ul {
 			padding: 0;
+
 			li {
 				a {
 					border-right: 1px solid $gc-header-footer-divider-color;
@@ -415,6 +429,7 @@ body {
 		ul {
 			padding-right: 0;
 		}
+
 		li {
 			margin: 12px 40px 13px 0;
 
@@ -428,6 +443,7 @@ body {
 		@extend %float-left;
 		padding-right: 0;
 		padding-left: 5px;
+
 		a {
 			border: {
 				left: 0;
