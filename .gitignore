@@ -8,7 +8,6 @@ node_modules/*
 jshint.out.xml
 csslint.out.xml
 
-
 # OS generated files #
 .DS_Store
 .DS_Store?
