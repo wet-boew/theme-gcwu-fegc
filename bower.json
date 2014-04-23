@@ -1,6 +1,6 @@
 {
   "name": "theme-gcwu-fegc",
-  "version": "4.0.1",
+  "version": "4.0.2-development",
   "license": "MIT",
   "ignore": [
     "**/.*",
@@ -11,7 +11,7 @@
     "tests"
   ],
   "devDependencies": {
-	"wet-boew": "git://github.com/wet-boew/wet-boew.git#v4.0.1"
+	"wet-boew": "https://github.com/wet-boew/wet-boew/tarball/master"
   },
   "resolutions": {
     "jquery": "~2.1.0"
