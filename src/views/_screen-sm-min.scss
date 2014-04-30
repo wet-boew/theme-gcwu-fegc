@@ -10,7 +10,7 @@
 
 #wb-info {
 	@include navigation-links;
-	background: $mediumview-footer-background-color url(../assets/sft-deco.gif) repeat-x scroll center top;
+	background: $screen-md-footer-background-color url(../assets/sft-deco.gif) repeat-x scroll center top;
 
 	> {
 		.container {
@@ -35,7 +35,7 @@
 
 	> {
 		:first-child {
-			border-right: 1px solid $mediumview-notices-border-color;
+			border-right: 1px solid $screen-md-notices-border-color;
 			padding-right: 10px;
 			line-height: 1.5
 		}
@@ -47,7 +47,7 @@
 		> {
 			:first-child {
 				border: {
-					left: 1px solid $mediumview-notices-border-color;
+					left: 1px solid $screen-md-notices-border-color;
 					right: 0;
 				}
 				padding: {

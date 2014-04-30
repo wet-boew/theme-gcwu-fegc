@@ -11,14 +11,14 @@
 %page-background {
 	background-color:#FFF;
 	border: {
-		left: 1px solid $mediumview-page-border-color;
-		right: 1px solid $mediumview-page-border-color;
+		left: 1px solid $screen-md-page-border-color;
+		right: 1px solid $screen-md-page-border-color;
 	}
 }
 
 %submenu-colors {
-	background-color: $mediumview-submenu-background-color;
-	color: $mediumview-submenu-text-color;
+	background-color: $screen-md-submenu-background-color;
+	color: $screen-md-submenu-text-color;
 }
 
 %search-controls-overrides {
@@ -119,7 +119,7 @@ body {
 
 	a {
 		font-size: 1.9em;
-		text-shadow: 1px 1px 1px $mediumview-banner-text-shadow-color;
+		text-shadow: 1px 1px 1px $screen-md-banner-text-shadow-color;
 		display: table-cell;
 		vertical-align: middle;
 		height: 3.6em;
@@ -130,9 +130,9 @@ body {
 	@extend %float-right;
 	background: #146094;
 	border: {
-		left: 1px solid $mediumview-menubar-side-border-color;
-		right: 1px solid $mediumview-menubar-side-border-color;
-		top: 1px solid $mediumview-menubar-top-border-color;
+		left: 1px solid $screen-md-menubar-side-border-color;
+		right: 1px solid $screen-md-menubar-side-border-color;
+		top: 1px solid $screen-md-menubar-top-border-color;
 	}
 	padding: 11px 15px 6px 15px;
 	position: absolute;
@@ -147,7 +147,7 @@ body {
 
 	.btn {
 		@extend %search-controls-overrides;
-		@include linear-background ($mediumview-search-button-gradient-start, $mediumview-search-button-gradient-end);
+		@include linear-background ($screen-md-search-button-gradient-start, $screen-md-search-button-gradient-end);
 		padding: 2px 6px;
 		line-height: 1;
 	}
@@ -160,10 +160,10 @@ body {
 #wb-sm {
 	margin-top: -1px;
 	.nvbar {
-		@include linear-background ($mediumview-menubar-gradient-start, $mediumview-menubar-gradient-end, 1);
+		@include linear-background ($screen-md-menubar-gradient-start, $screen-md-menubar-gradient-end, 1);
 		border: {
-			top: 1px solid $mediumview-menubar-top-border-color;
-			bottom: 4px solid $mediumview-menubar-bottom-border-color;
+			top: 1px solid $screen-md-menubar-top-border-color;
+			bottom: 4px solid $screen-md-menubar-bottom-border-color;
 		}
 
 		ul {
@@ -172,14 +172,14 @@ body {
 				> {
 					li {
 						padding: 0;
-						border-right: 1px solid $mediumview-menuitem-left-border-color;
+						border-right: 1px solid $screen-md-menuitem-left-border-color;
 
 						> {
 							a {
 								&.wb-navcurr {
 									@extend %gcwu-theme-wb-sm-wb-navcurr;
 								}
-								
+
 								// :focus not needed since already covered by the &.active state
 								&:hover {
 									@extend %submenu-colors;
@@ -188,7 +188,7 @@ body {
 						}
 
 						&.active {
-							border-right-color: $mediumview-menuitem-hover-border-color;
+							border-right-color: $screen-md-menuitem-hover-border-color;
 						}
 					}
 				}
@@ -201,10 +201,10 @@ body {
 			@extend %submenu-colors;
 		}
 	}
-	
+
 	a, summary {
 		display: block;
-		color: $mediumview-menubar-text-color;
+		color: $screen-md-menubar-text-color;
 		font-weight: 700;
 		padding: 0.48em 0.79em;
 		text-decoration: none;
@@ -214,7 +214,7 @@ body {
 		@extend %submenu-colors;
 		@extend %medium-view-navigation-links;
 		border: {
-			bottom: 4px solid $mediumview-submenu-bottom-border-color;
+			bottom: 4px solid $screen-md-submenu-bottom-border-color;
 			radius: 0 0 3px 3px;
 		}
 
@@ -375,7 +375,7 @@ body {
 	padding-right: 0;
 
 	a {
-		border-left: 1px solid $mediumview-canadaca-divider-color;
+		border-left: 1px solid $screen-md-canadaca-divider-color;
 		padding-left: 44px;
 		display: inline-block;
 		vertical-align: middle;
@@ -454,7 +454,7 @@ body {
 		a {
 			border: {
 				left: 0;
-				right: 1px solid $mediumview-canadaca-divider-color;
+				right: 1px solid $screen-md-canadaca-divider-color;
 			}
 			padding: {
 				left: 0;
