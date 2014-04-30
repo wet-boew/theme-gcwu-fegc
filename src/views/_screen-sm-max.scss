@@ -33,17 +33,17 @@
 
 #wb-bnr {
 	background: {
-		color: $smallview-banner-gradient-end;
-		image: linear-gradient($smallview-banner-gradient-start, $smallview-banner-gradient-start, $smallview-banner-gradient-end);
+		color: $screen-sm-banner-gradient-end;
+		image: linear-gradient($screen-sm-banner-gradient-start, $screen-sm-banner-gradient-start, $screen-sm-banner-gradient-end);
 	}
-	filter: unquote("progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#{$smallview-banner-gradient-start}', endColorstr='#{$smallview-banner-gradient-end}')");
+	filter: unquote("progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#{$screen-sm-banner-gradient-start}', endColorstr='#{$screen-sm-banner-gradient-end}')");
 }
 
 #wb-sttl {
 	position: relative;
 	a {
 		font-size: 1.5em;
-		text-shadow: 0 1px 1px $smallview-banner-text-shadow-color;
+		text-shadow: 0 1px 1px $screen-sm-banner-text-shadow-color;
 	}
 }
 
@@ -74,12 +74,12 @@ $gcwu-theme-mb-pnl-bg: #efefef;
 #mb-pnl {
 	background: $gcwu-theme-mb-pnl-bg;
 	header {
-		background-color: $smallview-menu-header-background-color;
+		background-color: $screen-sm-menu-header-background-color;
 	}
 
 	nav {
 		a {
-			color: $smallview-menu-links-color;
+			color: $screen-sm-menu-links-color;
 			text-decoration: none;
 		}
 	}
@@ -116,7 +116,7 @@ $gcwu-theme-mb-pnl-bg: #efefef;
 
 	.lng-ofr {
 		a {
-			color: $smallview-menu-links-color;
+			color: $screen-sm-menu-links-color;
 			text-decoration: none;
 		}
 	}
@@ -140,7 +140,7 @@ $gcwu-theme-mb-pnl-bg: #efefef;
 }
 
 #wb-bc {
-	@include linear-background($smallview-breadcrumb-bar-gradient-start, $smallview-breadcrumb-bar-gradient-end);
+	@include linear-background($screen-sm-breadcrumb-bar-gradient-start, $screen-sm-breadcrumb-bar-gradient-end);
 }
 
 #gc-info {
