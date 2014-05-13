@@ -53,11 +53,13 @@ $screen-md-canadaca-divider-color: #666;
 
 @mixin navigation-links {
 	a {
-		&:link {
+		&:link,
+		&:visited {
 			text-decoration: none;
 		}
 
-		&:hover, &:focus {
+		&:hover,
+		&:focus {
 			text-decoration: underline;
 		}
 	}
