@@ -48,7 +48,7 @@ $screen-md-canadaca-divider-color: #666;
 		}
 		image: linear-gradient($start-color, $end-color);
 	}
-	filter: unquote("progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#{$start-color}', endColorstr='#{$end-color}')");
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr="#{$start-color}", endColorstr="#{$end-color}");
 }
 
 @mixin navigation-links {
