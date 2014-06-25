@@ -36,7 +36,7 @@
 		color: $screen-sm-banner-gradient-end;
 		image: linear-gradient($screen-sm-banner-gradient-start, $screen-sm-banner-gradient-start, $screen-sm-banner-gradient-end);
 	}
-	filter: unquote("progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#{$screen-sm-banner-gradient-start}', endColorstr='#{$screen-sm-banner-gradient-end}')");
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr="#{$screen-sm-banner-gradient-start}", endColorstr="#{$screen-sm-banner-gradient-end}");
 }
 
 #wb-sttl {
