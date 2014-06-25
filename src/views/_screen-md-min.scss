@@ -11,7 +11,7 @@
 %page-background {
 	background-color:#FFF;
 	border: {
-		left: 1px solid $screen-md-page-border-color;
+		leftlf: 1px solid $screen-md-page-border-color;
 		right: 1px solid $screen-md-page-border-color;
 	}
 }
@@ -237,7 +237,9 @@ body {
 		}
 
 		.slflnk {
-			background: #bbb;
+            a {
+                background: #bbb;
+            }
 		}
 	}
 }
