@@ -11,6 +11,15 @@ module.exports = (grunt) ->
 	)
 
 	@registerTask(
+		"travis"
+		"Tasks run by Travis-CI"
+		[
+			"dist"
+			"htmllint"
+		]
+	)
+
+	@registerTask(
 		"dist"
 		"Produces the production files"
 		[
