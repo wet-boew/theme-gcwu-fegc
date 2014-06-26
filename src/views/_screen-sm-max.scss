@@ -104,13 +104,13 @@ $gcwu-theme-mb-pnl-bg: #efefef;
 	}
 
 	#wb-srch-sub-imprt {
+		@extend %small-view-under-color-fff;
 		background: #146094;
 		border-color: #146094;
-		@extend %small-view-under-color-fff;
 		&:hover, &:focus, &:active {
+			@extend %small-view-under-color-fff;
 			background-color: #3276b1;
 			border-color: #285e8e;
-			@extend %small-view-under-color-fff;
 		}
 	}
 
