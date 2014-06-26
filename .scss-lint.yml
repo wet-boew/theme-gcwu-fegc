@@ -36,5 +36,3 @@ linters:
   MergeableSelector:
     enabled: false
     force_nesting: false
-  SpaceBeforeBrace:
-    enabled: false
