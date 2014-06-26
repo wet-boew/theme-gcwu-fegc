@@ -1,0 +1,19 @@
+exclude:
+  - "lib/**"
+  - "node_modules/**"
+  - "dist/**"
+
+linters:
+  StringQuotes:
+    enabled: true
+    style: double_quotes
+  Indentation:
+    width: 1
+  Comment:
+    enabled: false
+  LeadingZero:
+    enabled: false
+  SelectorDepth:
+    enabled: false
+  NameFormat:
+    enabled: false

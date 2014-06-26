@@ -17,10 +17,10 @@
 }
 
 #wmms {
-	position: absolute;
-	top: 0.3em;
 	margin-left: 15px;
 	margin-top: 4px;
+	position: absolute;
+	top: 0.3em;
 }
 
 #gc-bar {
@@ -36,11 +36,12 @@
 		color: $screen-sm-banner-gradient-end;
 		image: linear-gradient($screen-sm-banner-gradient-start, $screen-sm-banner-gradient-start, $screen-sm-banner-gradient-end);
 	}
-	filter: unquote("progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#{$screen-sm-banner-gradient-start}', endColorstr='#{$screen-sm-banner-gradient-end}')");
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr="#{ie-hex-str($screen-sm-banner-gradient-start)}", endColorstr="#{ie-hex-str($screen-sm-banner-gradient-end)}");
 }
 
 #wb-sttl {
 	position: relative;
+
 	a {
 		font-size: 1.5em;
 		text-shadow: 0 1px 1px $screen-sm-banner-text-shadow-color;
@@ -49,20 +50,22 @@
 
 #wb-glb-mn {
 	.pnl-btn {
+		float: right;
+		margin: 0;
 		position: relative;
 		z-index: 2;
-		margin: 0;
-		float: right;
+
 		li {
 			padding: 4px 10px;
 			width: 100%;
 		}
+
 		a {
-			font-size: 1.5em;
-			display: block;
-			width: 100%;
 			color: $gc-header-footer-background-color;
+			display: block;
+			font-size: 1.5em;
 			line-height: 1em;
+			width: 100%;
 		}
 	}
 }
@@ -70,9 +73,10 @@
 %small-view-under-color-fff {
 	color: #fff;
 }
-$gcwu-theme-mb-pnl-bg: #efefef;
+
 #mb-pnl {
-	background: $gcwu-theme-mb-pnl-bg;
+	background: $screen-sm-mb-pnl-bg;
+
 	header {
 		background-color: $screen-sm-menu-header-background-color;
 	}
@@ -85,13 +89,14 @@ $gcwu-theme-mb-pnl-bg: #efefef;
 	}
 
 	summary {
-		&:hover, &:focus {
+		&:hover,
+		&:focus {
 			background: transparent;
 		}
 	}
 
 	.modal-body {
-		background: $gcwu-theme-mb-pnl-bg;
+		background: $screen-sm-mb-pnl-bg;
 		padding: 0;
 	}
 
@@ -104,13 +109,16 @@ $gcwu-theme-mb-pnl-bg: #efefef;
 	}
 
 	#wb-srch-sub-imprt {
+		@extend %small-view-under-color-fff;
 		background: #146094;
 		border-color: #146094;
-		@extend %small-view-under-color-fff;
-		&:hover, &:focus, &:active {
-			background-color: #3276B1;
-			border-color: #285E8E;
+
+		&:hover,
+		&:focus,
+		&:active {
 			@extend %small-view-under-color-fff;
+			background-color: #3276b1;
+			border-color: #285e8e;
 		}
 	}
 
@@ -127,12 +135,16 @@ $gcwu-theme-mb-pnl-bg: #efefef;
 
 	.sm-pnl {
 		background: #146094;
+
 		a {
 			@extend %small-view-under-color-fff;
 		}
+
 		summary {
 			@extend %small-view-under-color-fff;
-			&:hover, &:focus {
+
+			&:hover,
+			&:focus {
 				@extend %small-view-under-color-fff;
 			}
 		}
@@ -152,8 +164,8 @@ $gcwu-theme-mb-pnl-bg: #efefef;
 		.srch-pnl {
 			.form-group {
 				float: right;
-				margin-right: auto;
 				margin-left: 5px;
+				margin-right: auto;
 				width: 75%;
 			}
 		}
@@ -170,6 +182,7 @@ $gcwu-theme-mb-pnl-bg: #efefef;
 				text-align: left;
 			}
 		}
+
 		.pnl-btn {
 			float: left;
 		}

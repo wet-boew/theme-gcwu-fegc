@@ -13,8 +13,8 @@
 }
 
 #wmms {
-	height: 2.1em;
 	float: right;
+	height: 2.1em;
 	margin-top: 10px;
 }
 
@@ -25,16 +25,16 @@ header {
 main {
 	> {
 		div {
-			background: url(../assets/sp-pe-bg.jpg) repeat-x center top;
+			background: url("../assets/sp-pe-bg.jpg") repeat-x center top;
 			margin-top: 10px;
 			padding-top: 20px;
 		}
 	}
 
 	h1 {
+		margin: 0 0 30px;
 		position: relative;
 		text-align: center;
-		margin: 0 0 30px 0;
 	}
 
 	h2 {

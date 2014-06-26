@@ -10,15 +10,16 @@
 
 #wb-info {
 	@include navigation-links;
-	background: $screen-md-footer-background-color url(../assets/sft-deco.gif) repeat-x scroll center top;
+	background: $screen-md-footer-background-color url("../assets/sft-deco.gif") repeat-x scroll center top;
 
 	> {
 		.container {
-			background: transparent url(../assets/sft-deco-leaf.gif) no-repeat top center;
+			background: transparent url("../assets/sft-deco-leaf.gif") no-repeat top center;
 		}
 	}
 
-	h2, h3 {
+	h2,
+	h3 {
 		font: {
 			size: 120%;
 			weight: 700;
@@ -27,17 +28,17 @@
 }
 
 #gc-tctr {
+	margin-bottom: 0;
 	padding: {
 		top: 5px;
 		right: 0;
 	}
-	margin-bottom: 0;
 
 	> {
 		:first-child {
 			border-right: 1px solid $screen-md-notices-border-color;
+			line-height: 1.5;
 			padding-right: 10px;
-			line-height: 1.5
 		}
 	}
 }
