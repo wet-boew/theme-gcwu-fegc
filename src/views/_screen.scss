@@ -63,7 +63,8 @@
 	}
 
 	li {
-		&:before, &:after {
+		&:before,
+		&:after {
 			font: {
 				family: "Glyphicons Halflings";
 				size: 0.7em;

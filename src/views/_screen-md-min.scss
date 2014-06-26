@@ -211,12 +211,14 @@ body {
 	}
 
 	.active {
-		a, summary {
+		a,
+		summary {
 			@extend %submenu-colors;
 		}
 	}
 
-	a, summary {
+	a,
+	summary {
 		display: block;
 		color: $screen-md-menubar-text-color;
 		font-weight: 700;
@@ -232,7 +234,8 @@ body {
 			radius: 0 0 3px 3px;
 		}
 
-		a, summary {
+		a,
+		summary {
 			@extend %submenu-colors;
 			font-weight: 400;
 
@@ -245,7 +248,8 @@ body {
 				@extend %gcwu-theme-wb-sm-wb-navcurr;
 			}
 
-			&:hover, &:focus {
+			&:hover,
+			&:focus {
 				text-decoration: underline;
 			}
 		}
@@ -304,7 +308,8 @@ body {
 				}
 
 				&[href] {
-					&:hover, &:focus {
+					&:hover,
+					&:focus {
 						@extend %secmenu-wet-theme-menuitem-curr-hover-focus;
 					}
 				}

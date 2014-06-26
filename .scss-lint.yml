@@ -31,5 +31,3 @@ linters:
     enabled: false
   UrlQuotes:
     enabled: false
-  SingleLinePerSelector:
-    enabled: false
