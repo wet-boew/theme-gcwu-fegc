@@ -19,7 +19,3 @@ linters:
     enabled: false
   UrlFormat:
     enabled: false
-
-# Temporary execptions
-  FinalNewline:
-    enabled: false
