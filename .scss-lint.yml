@@ -23,5 +23,3 @@ linters:
 # Temporary execptions
   FinalNewline:
     enabled: false
-  EmptyLineBetweenBlocks:
-    enabled: false

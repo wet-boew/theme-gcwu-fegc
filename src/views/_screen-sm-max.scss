@@ -41,6 +41,7 @@
 
 #wb-sttl {
 	position: relative;
+
 	a {
 		font-size: 1.5em;
 		text-shadow: 0 1px 1px $screen-sm-banner-text-shadow-color;
@@ -53,10 +54,12 @@
 		margin: 0;
 		position: relative;
 		z-index: 2;
+
 		li {
 			padding: 4px 10px;
 			width: 100%;
 		}
+
 		a {
 			color: $gc-header-footer-background-color;
 			display: block;
@@ -70,9 +73,10 @@
 %small-view-under-color-fff {
 	color: #fff;
 }
-$gcwu-theme-mb-pnl-bg: #efefef;
+
 #mb-pnl {
-	background: $gcwu-theme-mb-pnl-bg;
+	background: $screen-sm-mb-pnl-bg;
+
 	header {
 		background-color: $screen-sm-menu-header-background-color;
 	}
@@ -92,7 +96,7 @@ $gcwu-theme-mb-pnl-bg: #efefef;
 	}
 
 	.modal-body {
-		background: $gcwu-theme-mb-pnl-bg;
+		background: $screen-sm-mb-pnl-bg;
 		padding: 0;
 	}
 
@@ -131,9 +135,11 @@ $gcwu-theme-mb-pnl-bg: #efefef;
 
 	.sm-pnl {
 		background: #146094;
+
 		a {
 			@extend %small-view-under-color-fff;
 		}
+
 		summary {
 			@extend %small-view-under-color-fff;
 
@@ -176,6 +182,7 @@ $gcwu-theme-mb-pnl-bg: #efefef;
 				text-align: left;
 			}
 		}
+
 		.pnl-btn {
 			float: left;
 		}
