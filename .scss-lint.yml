@@ -44,5 +44,3 @@ linters:
     enabled: false
   SpaceAfterPropertyColon:
     enabled: false
-  Shorthand:
-    enabled: false
