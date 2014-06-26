@@ -47,6 +47,7 @@
 
 #wb-sttl {
 	@extend %all-view-navigation-links;
+
 	a {
 		color: #fff !important;
 
@@ -100,10 +101,12 @@
 			&:before {
 				@extend %no-breadcrumb-icon;
 			}
+
 			&:after {
 				content: "\e091";
 				padding: 0 5px;
 			}
+
 			&:first-child {
 				&:after {
 					@extend %no-breadcrumb-icon;

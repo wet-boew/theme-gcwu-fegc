@@ -171,8 +171,10 @@ body {
 	background: #0f315b;
 	color: #fff;
 }
+
 #wb-sm {
 	margin-top: -1px;
+
 	.nvbar {
 		@include linear-background ($screen-md-menubar-gradient-start, $screen-md-menubar-gradient-end, 1);
 		border: {
@@ -183,6 +185,7 @@ body {
 		ul {
 			&.menu {
 				margin-bottom: 0;
+
 				> {
 					li {
 						border-right: 1px solid $screen-md-menuitem-left-border-color;
@@ -280,6 +283,7 @@ body {
 #wb-sec {
 	margin-top: 20px;
 	padding-bottom: 2em;
+
 	h3 {
 		border: 1px solid #ddd;
 		border-bottom: 3px solid #666;
@@ -292,6 +296,7 @@ body {
 			text-decoration: none;
 		}
 	}
+
 	.list-group {
 		margin-bottom: 0;
 
