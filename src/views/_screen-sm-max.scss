@@ -85,7 +85,8 @@ $gcwu-theme-mb-pnl-bg: #efefef;
 	}
 
 	summary {
-		&:hover, &:focus {
+		&:hover,
+		&:focus {
 			background: transparent;
 		}
 	}
@@ -107,7 +108,10 @@ $gcwu-theme-mb-pnl-bg: #efefef;
 		@extend %small-view-under-color-fff;
 		background: #146094;
 		border-color: #146094;
-		&:hover, &:focus, &:active {
+
+		&:hover,
+		&:focus,
+		&:active {
 			@extend %small-view-under-color-fff;
 			background-color: #3276b1;
 			border-color: #285e8e;
@@ -132,7 +136,9 @@ $gcwu-theme-mb-pnl-bg: #efefef;
 		}
 		summary {
 			@extend %small-view-under-color-fff;
-			&:hover, &:focus {
+
+			&:hover,
+			&:focus {
 				@extend %small-view-under-color-fff;
 			}
 		}
