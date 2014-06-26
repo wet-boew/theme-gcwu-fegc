@@ -29,5 +29,3 @@ linters:
     enabled: false
   SpaceAfterComma:
     enabled: false
-  UrlQuotes:
-    enabled: false
