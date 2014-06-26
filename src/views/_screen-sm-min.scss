@@ -10,11 +10,11 @@
 
 #wb-info {
 	@include navigation-links;
-	background: $screen-md-footer-background-color url(../assets/sft-deco.gif) repeat-x scroll center top;
+	background: $screen-md-footer-background-color url("../assets/sft-deco.gif") repeat-x scroll center top;
 
 	> {
 		.container {
-			background: transparent url(../assets/sft-deco-leaf.gif) no-repeat top center;
+			background: transparent url("../assets/sft-deco-leaf.gif") no-repeat top center;
 		}
 	}
 
