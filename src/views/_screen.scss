@@ -58,19 +58,20 @@
 
 #wb-bc {
 	.breadcrumb {
-		margin-bottom: 0;
 		background: transparent;
+		margin-bottom: 0;
 	}
 
 	li {
 		&:before,
 		&:after {
+			color: #333;
 			font: {
 				family: "Glyphicons Halflings";
 				size: 0.7em;
 			}
-			color: #333;
 		}
+
 		&:before {
 			content: "\e092";
 		}
