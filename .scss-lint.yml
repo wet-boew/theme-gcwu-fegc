@@ -33,6 +33,3 @@ linters:
     enabled: false
   SingleLinePerSelector:
     enabled: false
-  MergeableSelector:
-    enabled: false
-    force_nesting: false

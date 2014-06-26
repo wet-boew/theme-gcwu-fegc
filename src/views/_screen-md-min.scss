@@ -48,6 +48,20 @@ body {
 		repeat: no-repeat, repeat-x;
 		position: center 2.7em;
 	}
+
+	> {
+		main {
+			@extend %page-background;
+		}
+
+		header {
+			+ {
+				.container {
+					@extend %page-background;
+				}
+			}
+		}
+	}
 }
 
 #gcwu-sig {
@@ -247,18 +261,6 @@ body {
 #wb-bc {
 	.container {
 		@extend %page-background;
-	}
-}
-
-body {
-	> {
-		main {
-			@extend %page-background;
-		}
-
-		header + .container {
-			@extend %page-background;
-		}
 	}
 }
 
