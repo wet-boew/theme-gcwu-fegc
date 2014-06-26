@@ -65,15 +65,15 @@ body {
 }
 
 #gcwu-sig {
-	position: absolute;
 	margin-left: 15px;
+	position: absolute;
 }
 
 #wmms {
 	@extend %brand-height;
 	@extend %float-right;
-	margin-top: 2.3em;
 	margin-right: 15px;
+	margin-top: 2.3em;
 }
 
 #wb-bar {
@@ -125,18 +125,18 @@ body {
 }
 
 #wb-sttl {
+	display: table-row;
 	margin: {
 		top: 5px;
 		bottom: 5px;
 	}
-	display: table-row;
 
 	a {
-		font-size: 1.9em;
-		text-shadow: 1px 1px 1px $screen-md-banner-text-shadow-color;
 		display: table-cell;
-		vertical-align: middle;
+		font-size: 1.9em;
 		height: 3.6em;
+		text-shadow: 1px 1px 1px $screen-md-banner-text-shadow-color;
+		vertical-align: middle;
 	}
 }
 
@@ -148,9 +148,9 @@ body {
 		right: 1px solid $screen-md-menubar-side-border-color;
 		top: 1px solid $screen-md-menubar-top-border-color;
 	}
+	bottom: -1px;
 	padding: 11px 15px 6px;
 	position: absolute;
-	bottom: -1px;
 	right: 0;
 	z-index: 2;
 
@@ -162,8 +162,8 @@ body {
 	.btn {
 		@extend %search-controls-overrides;
 		@include linear-background ($screen-md-search-button-gradient-start, $screen-md-search-button-gradient-end);
-		padding: 2px 6px;
 		line-height: 1;
+		padding: 2px 6px;
 	}
 }
 
@@ -185,8 +185,8 @@ body {
 				margin-bottom: 0;
 				> {
 					li {
-						padding: 0;
 						border-right: 1px solid $screen-md-menuitem-left-border-color;
+						padding: 0;
 
 						> {
 							a {
@@ -219,8 +219,8 @@ body {
 
 	a,
 	summary {
-		display: block;
 		color: $screen-md-menubar-text-color;
+		display: block;
 		font-weight: 700;
 		padding: 0.48em 0.79em;
 		text-decoration: none;
@@ -281,11 +281,11 @@ body {
 	margin-top: 20px;
 	padding-bottom: 2em;
 	h3 {
-		padding: 15px;
-		margin: 0;
 		border: 1px solid #ddd;
 		border-bottom: 3px solid #666;
 		font-size: 1em;
+		margin: 0;
+		padding: 15px;
 
 		a {
 			color: #333;
@@ -298,8 +298,8 @@ body {
 		a {
 			&.list-group-item {
 				background: $clrWhite;
-				color: $clrDark;
 				border-radius: 0;
+				color: $clrDark;
 				margin-top: -1px;
 				text-decoration: none;
 
@@ -334,12 +334,12 @@ body {
 					@extend %page-background;
 					background: transparent;
 					content: " ";
+					display: block;
+					height: 25px;
 					margin: {
 						left: -15px;
 						right: -15px;
 					}
-					display: block;
-					height: 25px;
 				}
 			}
 		}
@@ -355,8 +355,8 @@ body {
 	}
 
 	li {
-		margin: 12px 0 13px 40px;
 		line-height: normal;
+		margin: 12px 0 13px 40px;
 
 		&:first-child {
 			margin-left: 0;
@@ -385,10 +385,10 @@ body {
 
 	a {
 		border-left: 1px solid $screen-md-canadaca-divider-color;
-		padding-left: 44px;
 		display: inline-block;
-		vertical-align: middle;
 		font-size: 160%;
+		padding-left: 44px;
+		vertical-align: middle;
 	}
 }
 
@@ -457,8 +457,8 @@ body {
 
 	#canada-ca {
 		@extend %float-left;
-		padding-right: 0;
 		padding-left: 5px;
+		padding-right: 0;
 
 		a {
 			border: {

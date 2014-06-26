@@ -17,10 +17,10 @@
 }
 
 #wmms {
-	position: absolute;
-	top: 0.3em;
 	margin-left: 15px;
 	margin-top: 4px;
+	position: absolute;
+	top: 0.3em;
 }
 
 #gc-bar {
@@ -49,20 +49,20 @@
 
 #wb-glb-mn {
 	.pnl-btn {
+		float: right;
+		margin: 0;
 		position: relative;
 		z-index: 2;
-		margin: 0;
-		float: right;
 		li {
 			padding: 4px 10px;
 			width: 100%;
 		}
 		a {
-			font-size: 1.5em;
-			display: block;
-			width: 100%;
 			color: $gc-header-footer-background-color;
+			display: block;
+			font-size: 1.5em;
 			line-height: 1em;
+			width: 100%;
 		}
 	}
 }
@@ -158,8 +158,8 @@ $gcwu-theme-mb-pnl-bg: #efefef;
 		.srch-pnl {
 			.form-group {
 				float: right;
-				margin-right: auto;
 				margin-left: 5px;
+				margin-right: auto;
 				width: 75%;
 			}
 		}
