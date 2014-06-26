@@ -42,5 +42,3 @@ linters:
     enabled: false
   DeclarationOrder:
     enabled: false
-  SpaceAfterPropertyColon:
-    enabled: false
