@@ -9,7 +9,7 @@
  */
 
 %page-background {
-	background-color:#fff;
+	background-color: #fff;
 	border: {
 		left: 1px solid $screen-md-page-border-color;
 		right: 1px solid $screen-md-page-border-color;
@@ -72,7 +72,7 @@ body {
 	margin: 15px 10px;
 
 	li {
-		padding:0;
+		padding: 0;
 	}
 
 	a {
@@ -364,7 +364,7 @@ body {
 			text-transform: uppercase;
 
 			&:after {
-				content:"\a";
+				content: "\a";
 				white-space: pre;
 			}
 		}
