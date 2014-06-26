@@ -38,5 +38,3 @@ linters:
     force_nesting: false
   SpaceBeforeBrace:
     enabled: false
-  TrailingSemicolonAfterPropertyValue:
-    enabled: false
