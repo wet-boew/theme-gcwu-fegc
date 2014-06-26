@@ -36,7 +36,7 @@
 		color: $screen-sm-banner-gradient-end;
 		image: linear-gradient($screen-sm-banner-gradient-start, $screen-sm-banner-gradient-start, $screen-sm-banner-gradient-end);
 	}
-	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr="#{$screen-sm-banner-gradient-start}", endColorstr="#{$screen-sm-banner-gradient-end}");
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr="#{ie-hex-str($screen-sm-banner-gradient-start)}", endColorstr="#{ie-hex-str($screen-sm-banner-gradient-end)}");
 }
 
 #wb-sttl {
@@ -108,8 +108,8 @@ $gcwu-theme-mb-pnl-bg: #efefef;
 		border-color: #146094;
 		@extend %small-view-under-color-fff;
 		&:hover, &:focus, &:active {
-			background-color: #3276B1;
-			border-color: #285E8E;
+			background-color: #3276b1;
+			border-color: #285e8e;
 			@extend %small-view-under-color-fff;
 		}
 	}
