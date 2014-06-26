@@ -23,10 +23,6 @@ linters:
 # Temporary execptions
   FinalNewline:
     enabled: false
-  HexNotation:
-    enabled: false
-  HexValidation:
-    enabled: false
   EmptyLineBetweenBlocks:
     enabled: false
   PropertySortOrder:
