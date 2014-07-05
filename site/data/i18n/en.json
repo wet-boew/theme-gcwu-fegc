@@ -1,14 +1,4 @@
 {
-	"tmpl-health": "Health",
-	"tmpl-health-url": "healthycanadians.gc.ca",
-	"tmpl-travel": "Travel",
-	"tmpl-travel-url": "travel.gc.ca",
-	"tmpl-servicecanada": "Service Canada",
-	"tmpl-servicecanada-url": "servicecanada.gc.ca",
-	"tmpl-jobs": "Jobs",
-	"tmpl-jobs-url": "jobbank.gc.ca",
-	"tmpl-economy": "Economy",
-	"tmpl-economy-url": "actionplan.gc.ca",
 	"tmpl-home-url": "home",
 	"tmpl-gov-url": "gov",
 	"tmpl-dept-url": "dept"
