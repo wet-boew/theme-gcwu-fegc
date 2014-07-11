@@ -17,6 +17,7 @@
 }
 
 #wmms {
+	height: 2em;
 	margin-left: 15px;
 	margin-top: 4px;
 	position: absolute;
@@ -56,16 +57,23 @@
 		z-index: 2;
 
 		li {
-			padding: 4px 10px;
+			padding: 4px 0 4px 10px;
 			width: 100%;
 		}
 
 		a {
 			color: $gc-header-footer-background-color;
 			display: block;
-			font-size: 1.5em;
+			font-size: 1.7em;
 			line-height: 1em;
 			width: 100%;
+		}
+
+		span {
+			.glyphicon-th-list {
+				padding-left: 10px;
+				top: 0;
+			}
 		}
 	}
 }
@@ -185,6 +193,13 @@
 
 		.pnl-btn {
 			float: left;
+
+			span {
+				.glyphicon-th-list {
+					padding-left: 0;
+					padding-right: 10px;
+				}
+			}
 		}
 	}
 }
