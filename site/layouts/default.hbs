@@ -21,13 +21,13 @@
 				<a class="wb-sl" href="#wb-cont">{{{i18n "tmpl-skip-cont"}}}</a>
 			</li>
 {{#isnt footer "false"}}
-			<li class="wb-slc visible-md visible-lg">
-				<a class="wb-sl" href="#wb-info">{{{i18n "tmpl-skip-info"}}}</a>
+			<li class="wb-slc visible-sm visible-md visible-lg">
+				<a class="wb-sl" href="#wb-info">{{{i18n "tmpl-skip-about-site"}}}</a>
 			</li>
 {{/isnt}}
 {{#is secondarymenu "true"}}
 			<li class="wb-slc visible-md visible-lg">
-				<a class="wb-sl" href="#wb-sec">{{{i18n "tmpl-skip-sec"}}}</a>
+				<a class="wb-sl" href="#wb-sec">{{{i18n "tmpl-skip-section"}}}</a>
 			</li>
 {{/is}}
 		</ul>
@@ -39,7 +39,7 @@
 							{{>headerbar}}
 {{#isnt mobimenu "false"}}
 							<section class="wb-mb-links col-xs-12 visible-sm visible-xs" id="wb-glb-mn">
-								<h2>{{{i18n "menu"}}}</h2>
+								<h2>{{{i18n "srch-menus"}}}</h2>
 								{{>mobimenu}}
 							</section>
 {{/isnt}}
@@ -91,7 +91,7 @@
 		</main>
 {{#is secondarymenu "true"}}
 				<nav role="navigation" id="wb-sec" typeof="SiteNavigationElement" class="col-md-3 col-md-pull-9 visible-md visible-lg">
-					<h2>{{{i18n "tmpl-sec-menu"}}}</h2>
+					<h2>{{{i18n "tmpl-section-menu"}}}</h2>
 					{{>secondarymenu}}
 				</nav>
 			</div>
@@ -102,7 +102,7 @@
 		<footer role="contentinfo" id="wb-info" class="visible-sm visible-md visible-lg wb-navcurr">
 			<div class="container">
 				<nav role="navigation">
-					<h2>{{{i18n "tmpl-site-info"}}}</h2>
+					<h2>{{{i18n "tmpl-about-site"}}}</h2>
 					{{>notices}}
 					<div class="row">
 						{{>footer}}
