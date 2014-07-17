@@ -49,11 +49,11 @@ body {
 		position: center 2.7em;
 	}
 
-	> {
-		main {
-			@extend %page-background;
-		}
+	main {
+		@extend %page-background;
+	}
 
+	> {
 		header {
 			+ {
 				.container {
