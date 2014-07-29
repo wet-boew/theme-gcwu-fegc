@@ -24,6 +24,16 @@
 	top: 0.3em;
 }
 
+.wb-disable {
+	header {
+		background: #ebeae9;
+	}
+
+	#wmms {
+		position: static;
+	}
+}
+
 #gc-bar {
 	@extend %small-view-display-none;
 }

@@ -21,6 +21,16 @@
 	@include navigation-links;
 }
 
+.wb-disable {
+	body {
+		background: none !important;
+	}
+
+	header {
+		background: #3f698f;
+	}
+}
+
 .wb-sl {
 	background-color: #000;
 	color: #fff;
@@ -198,8 +208,55 @@
 }
 
 #wb-info {
+	@include navigation-links;
+	background: $screen-md-footer-background-color url("../assets/sft-deco.gif") repeat-x scroll center top;
+
+	> {
+		.container {
+			background: transparent url("../assets/sft-deco-leaf.gif") no-repeat top center;
+
+			> {
+				:before {
+					@extend %page-background;
+					background: transparent;
+					content: " ";
+					display: block;
+					height: 25px;
+					margin: {
+						left: -15px;
+						right: -15px;
+					}
+				}
+			}
+		}
+	}
+
+	h2,
+	h3 {
+		font: {
+			size: 120%;
+			weight: 700;
+		}
+	}
+
 	li {
 		margin-bottom: 0.75em;
+	}
+}
+
+#gc-tctr {
+	margin-bottom: 0;
+	padding: {
+		top: 5px;
+		right: 0;
+	}
+
+	> {
+		:first-child {
+			border-right: 1px solid $screen-md-notices-border-color;
+			line-height: 1.5;
+			padding-right: 10px;
+		}
 	}
 }
 
@@ -225,5 +282,20 @@
 
 	#wb-dtmd {
 		float: left;
+	}
+
+	#gc-tctr {
+		> {
+			:first-child {
+				border: {
+					left: 1px solid $screen-md-notices-border-color;
+					right: 0;
+				}
+				padding: {
+					left: 10px;
+					right: 0;
+				}
+			}
+		}
 	}
 }
