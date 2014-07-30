@@ -170,6 +170,10 @@
 		.slflnk {
 			a {
 				background: #bbb;
+
+				&.wb-navcurr {
+					@extend %gcwu-theme-wb-sm-wb-navcurr;
+				}
 			}
 		}
 	}
