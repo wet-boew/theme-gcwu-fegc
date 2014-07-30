@@ -45,7 +45,9 @@ body {
 	}
 
 	main {
-		@extend %page-background;
+		&.container {
+			@extend %page-background;
+		}
 	}
 
 	> {
