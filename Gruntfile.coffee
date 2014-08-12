@@ -224,6 +224,13 @@ module.exports = (grunt) ->
 				dest: "dist/js/"
 				ext: ".min.js"
 
+		i18n_csv:
+			list_locales:
+				options:
+					csv: "lib/wet-boew/src/i18n/i18n.csv"
+					startCol: 1
+					listOnly: true
+
 		assemble:
 			options:
 				prettify:
@@ -246,6 +253,25 @@ module.exports = (grunt) ->
 				layoutdir: "site/layouts"
 				layout: "default.hbs"
 
+			theme:
+				options:
+					assets: "dist/unmin"
+					environment:
+						jqueryVersion: "<%= jqueryVersion.version %>"
+						jqueryOldIEVersion: "<%= jqueryOldIEVersion.version %>"
+					flatten: true,
+					plugins: ["assemble-contrib-i18n"]
+					i18n:
+						languages: "<%= i18n_csv.list_locales.locales %>"
+						templates: [
+							"site/pages/*.hbs"
+							"!site/pages/splashpage*.hbs"
+							"!site/pages/index*.hbs"
+							"!site/pages/feedback*.hbs"
+						]
+				dest: "dist/unmin/"
+				src: "!*.*"
+
 			demos:
 				options:
 					assets: "dist/unmin"
@@ -258,6 +284,10 @@ module.exports = (grunt) ->
 						cwd: "site/pages"
 						src: [
 							"**/*.hbs"
+							"!*.hbs"
+							"splashpage*.hbs"
+							"index*.hbs"
+							"feedback*.hbs"
 						]
 						dest: "dist/unmin"
 					,
@@ -287,6 +317,26 @@ module.exports = (grunt) ->
 						dest: "dist/unmin/demos"
 				]
 
+			theme_min:
+				options:
+					assets: "dist"
+					environment:
+						suffix: ".min"
+						jqueryVersion: "<%= jqueryVersion.version %>"
+						jqueryOldIEVersion: "<%= jqueryOldIEVersion.version %>"
+					flatten: true,
+					plugins: ["assemble-contrib-i18n"]
+					i18n:
+						languages: "<%= i18n_csv.list_locales.locales %>"
+						templates: [
+							"site/pages/*.hbs"
+							"!site/pages/splashpage*.hbs"
+							"!site/pages/index*.hbs"
+							"!site/pages/feedback*.hbs"
+						]
+				dest: "dist/"
+				src: "!*.*"
+
 			demos_min:
 				options:
 					environment:
@@ -299,16 +349,11 @@ module.exports = (grunt) ->
 						expand: true
 						cwd: "site/pages"
 						src: [
-							"**/*.hbs",
-							"!index.hbs"
-						]
-						dest: "dist"
-					,
-						#index
-						expand: true
-						cwd: "site/pages"
-						src: [
-							"index.hbs"
+							"**/*.hbs"
+							"!*.hbs"
+							"splashpage*.hbs"
+							"index*.hbs"
+							"feedback*.hbs"
 						]
 						dest: "dist"
 					,
