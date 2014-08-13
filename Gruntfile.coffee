@@ -6,14 +6,16 @@ module.exports = (grunt) ->
 		"default"
 		"Default task, that runs the production build"
 		[
+			"hub"
 			"dist"
 		]
 	)
 
 	@registerTask(
 		"travis"
-		"Tasks run by Travis-CI"
+		"Task run by Travis-CI"
 		[
+			"hub"
 			"dist"
 			"htmllint"
 		]
@@ -39,6 +41,7 @@ module.exports = (grunt) ->
 		[
 			"build"
 			"assemble:demos"
+			"assemble:theme"
 			"htmllint"
 		]
 	)
@@ -48,7 +51,7 @@ module.exports = (grunt) ->
 		"Produces unminified files"
 		[
 			"clean:dist"
-			"hub"
+			"i18n_csv"
 			"copy:wetboew"
 			"assets"
 			"css"
@@ -110,6 +113,15 @@ module.exports = (grunt) ->
 		]
 	)
 
+	@registerTask(
+		"test"
+		"INTERNAL: Runs testing tasks except for SauceLabs testing"
+		[
+			"jshint"
+			"jscs"
+		]
+	)
+
 	@initConfig
 
 		# Metadata.
@@ -166,7 +178,6 @@ module.exports = (grunt) ->
 				cwd: "src"
 				src: "**/*.js"
 				dest: "dist/unmin/js"
-
 			deploy:
 				src: [
 					"*.txt"
@@ -212,6 +223,20 @@ module.exports = (grunt) ->
 				ext: ".min.css"
 				dest: "dist/css"
 
+		jshint:
+			options:
+				jshintrc: "lib/wet-boew/.jshintrc"
+
+			lib_test:
+				src: [
+					"src/**/*.js"
+				]
+
+		jscs:
+			all:
+				src: [
+					"src/**/*.js"
+				]
 
 		# Minify
 		uglify:
@@ -219,10 +244,17 @@ module.exports = (grunt) ->
 				options:
 					banner: "<%= banner %>"
 				expand: true
-				cwd: "src/js/"
+				cwd: "<%= copy.js.cwd %>"
 				src: "<%= copy.js.src %>"
 				dest: "dist/js/"
 				ext: ".min.js"
+
+		i18n_csv:
+			list_locales:
+				options:
+					csv: "lib/wet-boew/src/i18n/i18n.csv"
+					startCol: 1
+					listOnly: true
 
 		assemble:
 			options:
@@ -246,6 +278,25 @@ module.exports = (grunt) ->
 				layoutdir: "site/layouts"
 				layout: "default.hbs"
 
+			theme:
+				options:
+					assets: "dist/unmin"
+					environment:
+						jqueryVersion: "<%= jqueryVersion.version %>"
+						jqueryOldIEVersion: "<%= jqueryOldIEVersion.version %>"
+					flatten: true,
+					plugins: ["assemble-contrib-i18n"]
+					i18n:
+						languages: "<%= i18n_csv.list_locales.locales %>"
+						templates: [
+							"site/pages/*.hbs"
+							"!site/pages/splashpage*.hbs"
+							"!site/pages/index*.hbs"
+							"!site/pages/feedback*.hbs"
+						]
+				dest: "dist/unmin/"
+				src: "!*.*"
+
 			demos:
 				options:
 					assets: "dist/unmin"
@@ -258,6 +309,10 @@ module.exports = (grunt) ->
 						cwd: "site/pages"
 						src: [
 							"**/*.hbs"
+							"!*.hbs"
+							"splashpage*.hbs"
+							"index*.hbs"
+							"feedback*.hbs"
 						]
 						dest: "dist/unmin"
 					,
@@ -287,6 +342,26 @@ module.exports = (grunt) ->
 						dest: "dist/unmin/demos"
 				]
 
+			theme_min:
+				options:
+					assets: "dist"
+					environment:
+						suffix: ".min"
+						jqueryVersion: "<%= jqueryVersion.version %>"
+						jqueryOldIEVersion: "<%= jqueryOldIEVersion.version %>"
+					flatten: true,
+					plugins: ["assemble-contrib-i18n"]
+					i18n:
+						languages: "<%= i18n_csv.list_locales.locales %>"
+						templates: [
+							"site/pages/*.hbs"
+							"!site/pages/splashpage*.hbs"
+							"!site/pages/index*.hbs"
+							"!site/pages/feedback*.hbs"
+						]
+				dest: "dist/"
+				src: "!*.*"
+
 			demos_min:
 				options:
 					environment:
@@ -299,16 +374,11 @@ module.exports = (grunt) ->
 						expand: true
 						cwd: "site/pages"
 						src: [
-							"**/*.hbs",
-							"!index.hbs"
-						]
-						dest: "dist"
-					,
-						#index
-						expand: true
-						cwd: "site/pages"
-						src: [
-							"index.hbs"
+							"**/*.hbs"
+							"!*.hbs"
+							"splashpage*.hbs"
+							"index*.hbs"
+							"feedback*.hbs"
 						]
 						dest: "dist"
 					,
@@ -425,6 +495,8 @@ module.exports = (grunt) ->
 	@loadNpmTasks "grunt-htmlcompressor"
 	@loadNpmTasks "grunt-html"
 	@loadNpmTasks "grunt-hub"
+	@loadNpmTasks "grunt-i18n-csv"
+	@loadNpmTasks "grunt-jscs-checker"
 	@loadNpmTasks "grunt-sass"
 
 	@
