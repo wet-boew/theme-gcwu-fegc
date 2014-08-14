@@ -439,6 +439,7 @@ module.exports = (grunt) ->
 					"!dist/unmin/**/ajax/**/*.html"
 					"!dist/unmin/assets/**/*.html"
 					"!dist/unmin/demos/menu/demo/*.html"
+					"!dist/unmin/test/*.html"
 				]
 
 		hub:
