@@ -13,15 +13,5 @@
  */
 /* All screen views */
 @media screen {
-	@import "splash/screen";
-}
-
-/* Small view and under */
-@media screen and (max-width: $screen-sm-max) {
-	@import "splash/screen-sm-max";
-}
-
-/* Medium view and over */
-@media screen and (min-width: $screen-md-min) {
-	@import "splash/screen-md-min";
+	@import "servermessage/screen";
 }
