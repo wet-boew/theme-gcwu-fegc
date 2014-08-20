@@ -5,7 +5,7 @@
 	"parentdir": "theme-gcwu-fegc",
 	"language": "fr",
 	"altLangPrefix": "index",
-	"dateModified": "2014-08-13"
+	"dateModified": "2014-08-19"
 }
 ---
 <section>
@@ -29,11 +29,18 @@
 		{{#is lang-code "en"}}
 		<li><a href="feedback-en.html">Formulaire de rétroaction</a></li>
 		<li><a href="splashpage-en.html">Page d'entrée</a></li>
+		<li><a href="404-en.html">Page d'erreur 404</a></li>
+		<li><a href="404-en-fr.html">Page d'erreur 404 (anglais/français)</a></li>
+		<li><a href="servermessage-en-fr.html">Page de message du serveur (anglais/français)</a></li>
 		{{/is}}
 		{{#is lang-code "fr"}}
 		<li><a href="feedback-fr.html">Formulaire de rétroaction</a></li>
 		<li><a href="splashpage-fr.html">Page d'entrée</a></li>
+		<li><a href="404-fr.html">Page d'erreur 404</a></li>
+		<li><a href="404-fr-en.html">Page d'erreur 404 (anglais/français)</a></li>
+		<li><a href="servermessage-fr-en.html">Page de message du serveur (français/anglais)</a></li>
 		{{/is}}
+		<li><a href="servermessage-{{lang-code}}.html">Page de message du serveur</a></li>
 	</ul>
 </section>
 {{/withSort}}
