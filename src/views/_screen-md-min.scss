@@ -170,17 +170,17 @@ body {
 	}
 }
 
-#wb-cont {
-	margin-top: 20px;
-}
-
 %secmenu-wet-theme-menuitem-curr-hover-focus {
 	background: darken($clrWhite, 50%);
 	color: lighten($clrDark, 75%);
 }
 
+#wb-cont {
+	margin-top: 38px;
+}
+
 #wb-sec {
-	margin-top: 20px;
+	margin-top: 38px;
 	padding-bottom: 2em;
 
 	h3 {
