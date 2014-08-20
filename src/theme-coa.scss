@@ -14,8 +14,6 @@
 
 /* Medium view and over */
 @media screen and (min-width: $screen-md-min) {
-	@import "views/screen-md-min";
-
 	body {
 		background: {
 			position: center 3.85em;
@@ -41,5 +39,4 @@
 		line-height: 61px;
 		margin: 2px 10px;
 	}
-
 }
