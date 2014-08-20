@@ -293,6 +293,8 @@ module.exports = (grunt) ->
 							"!site/pages/splashpage*.hbs"
 							"!site/pages/index*.hbs"
 							"!site/pages/feedback*.hbs"
+							"!site/pages/404*.hbs"
+							"!site/pages/servermessage-*.hbs"
 						]
 				dest: "dist/unmin/"
 				src: "!*.*"
@@ -313,6 +315,8 @@ module.exports = (grunt) ->
 							"splashpage*.hbs"
 							"index*.hbs"
 							"feedback*.hbs"
+							"404*.hbs"
+							"servermessage-*.hbs"
 						]
 						dest: "dist/unmin"
 					,
@@ -358,6 +362,8 @@ module.exports = (grunt) ->
 							"!site/pages/splashpage*.hbs"
 							"!site/pages/index*.hbs"
 							"!site/pages/feedback*.hbs"
+							"!site/pages/404*.hbs"
+							"!site/pages/servermessage-*.hbs"
 						]
 				dest: "dist/"
 				src: "!*.*"
@@ -379,6 +385,8 @@ module.exports = (grunt) ->
 							"splashpage*.hbs"
 							"index*.hbs"
 							"feedback*.hbs"
+							"404*.hbs"
+							"servermessage-*.hbs"
 						]
 						dest: "dist"
 					,
