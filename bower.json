@@ -12,7 +12,7 @@
     "lib"
   ],
   "devDependencies": {
-    "wet-boew": "https://github.com/wet-boew/wet-boew/tarball/master"
+    "wet-boew": "https://github.com/wet-boew/wet-boew.git#master"
   },
   "homepage": "https://github.com/wet-boew/theme-gcwu-fegc",
   "authors": [
