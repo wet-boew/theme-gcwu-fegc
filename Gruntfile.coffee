@@ -27,7 +27,7 @@ module.exports = (grunt) ->
 			"build"
 			"assets-dist"
 			"assemble"
-			"htmlcompressor"
+			"htmlmin"
 			"htmllint"
 		]
 	)
@@ -422,10 +422,9 @@ module.exports = (grunt) ->
 						dest: "dist/demos"
 				]
 
-		htmlcompressor:
+		htmlmin:
 			options:
-				type: "html"
-				concurrentProcess: 5
+				collapseWhitespace: true
 				preserveLineBreaks: true
 			all:
 				cwd: "dist"
@@ -509,10 +508,10 @@ module.exports = (grunt) ->
 	@loadNpmTasks "grunt-contrib-copy"
 	@loadNpmTasks "grunt-contrib-cssmin"
 	@loadNpmTasks "grunt-contrib-jshint"
+	@loadNpmTasks "grunt-contrib-htmlmin"
 	@loadNpmTasks "grunt-contrib-uglify"
 	@loadNpmTasks "grunt-contrib-watch"
 	@loadNpmTasks "grunt-gh-pages"
-	@loadNpmTasks "grunt-htmlcompressor"
 	@loadNpmTasks "grunt-html"
 	@loadNpmTasks "grunt-hub"
 	@loadNpmTasks "grunt-i18n-csv"
