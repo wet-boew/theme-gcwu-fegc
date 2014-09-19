@@ -41,3 +41,9 @@
 	right: 0;
 	top: 0;
 }
+
+#wb-bc {
+	a[href]:after {
+		content: "";
+	}
+}
