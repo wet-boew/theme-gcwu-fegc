@@ -4,7 +4,7 @@ node_js:
 
 install:
   - ./script/setup
-  - gem install scss-lint --no-ri --version '=0.24.0'
+  - gem install scss-lint --no-ri --version '=0.26.2'
 
 script:
   - travis_retry ./script/travis_script.sh
