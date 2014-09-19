@@ -1,4 +1,4 @@
 #!/bin/bash -e
 
-scss-lint .
+scss-lint src site
 grunt travis
