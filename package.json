@@ -7,6 +7,10 @@
     "travis_script": "scss-lint . && grunt",
     "travis_after_success": "grunt deploy"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wet-boew/theme-gcwu-fegc.git"
+  },
   "author": "",
   "license": "MIT",
   "devDependencies": {
