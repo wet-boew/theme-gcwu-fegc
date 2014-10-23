@@ -3,7 +3,9 @@
   "version": "4.0.7-development",
   "scripts": {
     "test": "grunt",
-    "postinstall": "bower update"
+    "postinstall": "bower update",
+    "travis_script": "scss-lint . && grunt",
+    "travis_after_success": "grunt deploy"
   },
   "author": "",
   "license": "MIT",
@@ -28,6 +30,7 @@
     "grunt-install-dependencies": "~0.2.0",
     "grunt-jscs-checker": "^0.4.2",
     "grunt-sass": "^0.14.0",
+    "grunt-wet-boew-postbuild": "wet-boew/grunt-wet-boew-postbuild#v0.1.2",
     "time-grunt": "^1.0.0"
   }
 }
