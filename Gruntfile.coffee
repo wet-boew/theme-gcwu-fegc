@@ -29,6 +29,7 @@ module.exports = (grunt) ->
 			"assemble"
 			"htmlmin"
 			"htmllint"
+			"useMinAssets"
 		]
 	)
 
@@ -130,6 +131,25 @@ module.exports = (grunt) ->
 			"jshint"
 			"jscs"
 		]
+	)
+
+	@registerTask(
+		"useMinAssets"
+		"Replace unmin refrences with the min paths for HTML files"
+		() ->
+			htmlFiles = grunt.file.expand(
+				"dist/**/*.html"
+				"!dist/unmin/**/*.html"
+			);
+
+			htmlFiles.forEach(
+				( file ) ->
+					contents = grunt.file.read( file )
+					contents = contents.replace( /\/unmin/g, "" )
+					contents = contents.replace( /\"(?!https:)([^\"]*)?\.(js|css)\"/g, "\"$1.min.$2\"" )
+
+					grunt.file.write(file, contents);
+			);
 	)
 
 	@initConfig
@@ -357,85 +377,14 @@ module.exports = (grunt) ->
 						dest: "dist/unmin/demos"
 				]
 
-			theme_min:
-				options:
-					assets: "dist"
-					environment:
-						suffix: ".min"
-						jqueryVersion: "<%= jqueryVersion.version %>"
-						jqueryOldIEVersion: "<%= jqueryOldIEVersion.version %>"
-					flatten: true,
-					plugins: ["assemble-contrib-i18n"]
-					i18n:
-						languages: "<%= i18n_csv.list_locales.locales %>"
-						templates: [
-							"site/pages/*.hbs"
-							"!site/pages/splashpage*.hbs"
-							"!site/pages/index*.hbs"
-							"!site/pages/feedback*.hbs"
-							"!site/pages/404*.hbs"
-							"!site/pages/servermessage-*.hbs"
-						]
-				dest: "dist/"
-				src: "!*.*"
-
-			demos_min:
-				options:
-					environment:
-						suffix: ".min"
-						jqueryVersion: "<%= jqueryVersion.version %>"
-						jqueryOldIEVersion: "<%= jqueryOldIEVersion.version %>"
-					assets: "dist"
-				files: [
-						#site
-						expand: true
-						cwd: "site/pages"
-						src: [
-							"**/*.hbs"
-							"!*.hbs"
-							"splashpage*.hbs"
-							"index*.hbs"
-							"feedback*.hbs"
-							"404*.hbs"
-							"servermessage-*.hbs"
-						]
-						dest: "dist"
-					,
-						#plugins
-						expand: true
-						cwd: "lib/wet-boew/site/pages/demos"
-						src: [
-							"**/*.hbs"
-						]
-						dest: "dist/demos"
-					,
-						expand: true
-						cwd: "lib/wet-boew/src/plugins"
-						src: [
-							"**/*.hbs"
-						]
-						dest: "dist/demos"
-					,
-						expand: true
-						cwd: "lib/wet-boew/src/polyfills"
-						src: "**/*.hbs"
-						dest: "dist/demos"
-					,
-						expand: true
-						cwd: "lib/wet-boew/src/other"
-						src: "**/*.hbs"
-						dest: "dist/demos"
-				]
-
 		htmlmin:
 			options:
 				collapseWhitespace: true
 				preserveLineBreaks: true
 			all:
-				cwd: "dist"
+				cwd: "dist/unmin"
 				src: [
 					"**/*.html"
-					"!unmin/**/*.html"
 				]
 				dest: "dist"
 				expand: true
