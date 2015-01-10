@@ -5,8 +5,6 @@
  *
  */
 
-@import "../lib/wet-boew/src/variables";
-
 $gc-header-footer-background-color: #000;
 $gc-header-footer-text-color: #fff;
 $gc-header-footer-divider-color: $gc-header-footer-text-color;
@@ -65,3 +63,5 @@ $screen-md-canadaca-divider-color: #666;
 		}
 	}
 }
+
+@import "../lib/wet-boew/src/variables";
