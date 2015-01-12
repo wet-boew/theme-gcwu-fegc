@@ -268,7 +268,7 @@ module.exports = (grunt) ->
 			theme:
 				expand: true
 				cwd: "dist/unmin/css/"
-				src: "*theme*.css"
+				src: "*.css"
 				ext: ".min.css"
 				dest: "dist/css"
 
