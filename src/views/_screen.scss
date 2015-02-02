@@ -12,11 +12,6 @@
 	height: 1.5em;
 }
 
-%no-breadcrumb-icon {
-	content: none;
-	padding: 0;
-}
-
 %all-view-navigation-links {
 	@include navigation-links;
 }
@@ -179,34 +174,6 @@
 	}
 }
 
-#wb-bc {
-	.breadcrumb {
-		background: transparent;
-		margin-bottom: 0;
-	}
-
-	li {
-		&:before,
-		&:after {
-			color: #333;
-			font: {
-				family: "Glyphicons Halflings";
-				size: 0.7em;
-			}
-		}
-
-		&:before {
-			content: "\e092";
-		}
-
-		&:first-child {
-			&:before {
-				@extend %no-breadcrumb-icon;
-			}
-		}
-	}
-}
-
 #wb-dtmd {
 	float: right;
 }
@@ -265,25 +232,6 @@
 }
 
 [dir=rtl] {
-	#wb-bc {
-		li {
-			&:before {
-				@extend %no-breadcrumb-icon;
-			}
-
-			&:after {
-				content: "\e091";
-				padding: 0 5px;
-			}
-
-			&:first-child {
-				&:after {
-					@extend %no-breadcrumb-icon;
-				}
-			}
-		}
-	}
-
 	#wb-dtmd {
 		float: left;
 	}
