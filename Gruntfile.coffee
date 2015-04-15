@@ -364,6 +364,7 @@ module.exports = (grunt) ->
 					environment:
 						jqueryVersion: "<%= jqueryVersion.version %>"
 						jqueryOldIEVersion: "<%= jqueryOldIEVersion.version %>"
+					languages: "<%= i18n_csv.list_locales.locales %>"
 				files: [
 						#site
 						expand: true
