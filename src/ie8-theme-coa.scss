@@ -1,0 +1,41 @@
+@charset "utf-8";
+/*
+ *
+ * Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
+ * wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html
+ *
+ */
+@import "ie8-theme";
+
+/*
+ Views
+ */
+
+/* Medium view and over */
+@media screen and (min-width: $screen-md-min) {
+	body {
+		background: {
+			position: center 3.85em;
+		}
+	}
+
+	%fip-height-coa {
+		height: 61px;
+	}
+
+	#gcwu-sig {
+		@extend %fip-height-coa;
+		margin: 2px 0;
+		margin-left: 15px;
+	}
+
+	#wb-bar {
+		line-height: 1;
+		min-height: 65px;
+	}
+
+	#gc-bar {
+		line-height: 61px;
+		margin: 2px 10px;
+	}
+}
