@@ -10,6 +10,10 @@
 
 @import "variables";
 
+/* WET Core */
+@import "../lib/wet-boew/src/base/ie8-bootstrap";
+@import "../lib/wet-boew/src/base/ie8-wet-boew";
+
 /* Medium view and over */
 @media screen and (min-width: $screen-md-min) {
 	@import "views/screen-md-min-ie8";
