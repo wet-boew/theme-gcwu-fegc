@@ -3,7 +3,7 @@
 	"officiallanguage": "<%= language === 'en' || language === 'fr' %>"
 }
 ---
-<object id="gcwu-sig" type="image/svg+xml" tabindex="-1" role="img" data="{{assets}}/assets/sig-{{#is headerbar.officiallanguage "true"}}{{language}}{{else}}{{site.defaultLanguage}}{{/is}}.svg" aria-label="{{{i18n "tmpl-gc-sig"}}}"></object>
+<object id="gcwu-sig" type="image/svg+xml" tabindex="-1" role="img" data="{{assets}}/../{{site.theme}}/assets/sig-{{#is headerbar.officiallanguage "true"}}{{language}}{{else}}{{site.defaultLanguage}}{{/is}}.svg" aria-label="{{{i18n "tmpl-gc-sig"}}}"></object>
 <ul id="gc-bar" class="list-inline">
 {{#is headerbar.officiallanguage "true"}}
 	<li><a href="http://www.canada.ca/{{language}}/index.html" rel="external">Canada.ca</a></li>

@@ -17,7 +17,7 @@
 	<body vocab="http://schema.org/" typeof="WebPage">
 		<header role="banner">
 			<div id="wb-bnr" class="container">
-				<object id="gcwu-sig" type="image/svg+xml" tabindex="-1" role="img" data="{{assets}}/assets/sig-alt-{{language}}.svg" aria-label="{{{i18n "tmpl-gc-sig"}}}"></object>
+				<object id="gcwu-sig" type="image/svg+xml" tabindex="-1" role="img" data="{{assets}}/../{{site.theme}}/assets/sig-alt-{{language}}.svg" aria-label="{{{i18n "tmpl-gc-sig"}}}"></object>
 			</div>
 		</header>
 		<main role="main" property="mainContentOfPage" class="container">
@@ -26,7 +26,7 @@
 			</div>
 		</main>
 		<footer role="contentinfo" class="container">
-			<object id="wmms" type="image/svg+xml" tabindex="-1" role="img" data="{{assets}}/assets/wmms-alt.svg" aria-label="{{{i18n "tmpl-gc-wmms"}}}"></object>
+			<object id="wmms" type="image/svg+xml" tabindex="-1" role="img" data="{{assets}}/../{{site.theme}}/assets/wmms-alt.svg" aria-label="{{{i18n "tmpl-gc-wmms"}}}"></object>
 		</footer>
 		{{>footerresources}}
 		{{#if environment.test}}{{>test}}{{/if}}

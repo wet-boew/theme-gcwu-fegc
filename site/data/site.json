@@ -2,5 +2,6 @@
 	"defaultLanguage": "en",
 	"wetSiteRoot": "http://wet-boew.github.io/v4.0-ci",
 	"repository": "theme-gcwu-fegc",
+	"theme": "theme-gcwu-fegc",
 	"themeJS": true
 }
