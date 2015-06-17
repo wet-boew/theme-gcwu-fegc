@@ -11,19 +11,9 @@ module.exports = (grunt) ->
 	)
 
 	@registerTask(
-		"travis"
-		"Task run by Travis-CI"
-		[
-			"dist"
-			"htmllint"
-		]
-	)
-
-	@registerTask(
 		"dist"
 		"Produces the production files"
 		[
-			"checkDependencies"
 			"build"
 			"assets-dist"
 			"assemble"
@@ -49,6 +39,7 @@ module.exports = (grunt) ->
 		"build"
 		"Produces unminified files"
 		[
+			"checkDependencies"
 			"clean:dist"
 			"i18n_csv"
 			"copy:wetboew"
@@ -146,7 +137,7 @@ module.exports = (grunt) ->
 			htmlFiles.forEach(
 				( file ) ->
 					contents = grunt.file.read( file )
-					contents = contents.replace( /\.\.\/\//g, "./" )
+					contents = contents.replace( /\.\.\/(wet\-boew|theme\-gcwu\-fegc)/g, "$1" )
 					contents = contents.replace( /\"(?!https:)([^\"]*)?\.(js|css)\"/g, "\"$1.min.$2\"" )
 
 					grunt.file.write(file, contents);
@@ -157,6 +148,7 @@ module.exports = (grunt) ->
 
 		# Metadata.
 		pkg: @file.readJSON("package.json")
+		themeDist: "dist/<%= pkg.name %>"
 		jqueryVersion: grunt.file.readJSON("lib/jquery/bower.json")
 		jqueryOldIEVersion: grunt.file.readJSON("lib/jquery-oldIE/bower.json")
 		banner: "/*!\n * Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)\n * wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html\n" +
@@ -175,50 +167,76 @@ module.exports = (grunt) ->
 				expand: true
 				cwd: "lib/wet-boew/dist"
 				src: [
-					"**/*.*"
-					"!**/theme*.css"
-					"!**/favicon*.*"
-					"!demos/**/*.*"
-					"!unmin/demos/**/*.*"
-					"!theme/**/*.*"
-					"!unmin/theme/**/*.*"
-					"!**/logo.*"
+					"wet-boew/**/*.*"
+					"**/ajax/**/*.*"
 				]
-				dest: "dist/"
+				dest: "dist"
 			wetboew_demo:
 				expand: true
 				cwd: "lib/wet-boew/dist/unmin"
-				src: "demos/**/demo/*.*"
-				dest: "dist/unmin/"
+				src: [
+					"demos/**/*.*"
+					"docs/**/*.*"
+					"!**/*.html"
+					"demos/**/ajax/*.html"
+				]
+				dest: "dist/unmin"
 			wetboew_demo_min:
 				expand: true
 				cwd: "lib/wet-boew/dist"
-				src: "demos/**/demo/*.*"
-				dest: "dist/"
+				src: "<%= copy.wetboew_demo.src %>"
+				dest: "dist"
 			assets:
 				expand: true
 				cwd: "src/assets"
 				src: "**/*.*"
-				dest: "dist/assets"
+				dest: "<%= themeDist %>/assets"
 			js:
 				expand: true
 				cwd: "src"
 				src: "**/*.js"
-				dest: "dist/js"
+				dest: "<%= themeDist %>/js"
 			deploy:
-				src: [
-					"*.txt"
-					"README.md"
+				files: [
+					{
+						src: [
+							"*.txt"
+							"README.md"
+						]
+						dest: "dist"
+						expand: true
+					}
+
+					#Backwards compatibility.
+					#TODO: Remove in v4.1
+					{
+						cwd: "<%= themeDist %>"
+						src: "**/*.*"
+						dest: "dist"
+						expand: true
+					}
+					{
+						cwd: "dist/wet-boew"
+						src: "**/*.*"
+						dest: "dist"
+						expand: true
+					}
 				]
-				dest: "dist"
-				expand: true
+
+				#Backwards compatibility.
+				#TODO: Remove in v4.1
+				options:
+					process: (content, filepath) ->
+						if filepath.match(/\.css/)
+							return content.replace(/\.\.\/\.\.\/wet-boew\/(assets|fonts)/g, '../$1')
+						content
 
 		sass:
 			all:
 				expand: true
 				cwd: "src"
 				src: "*.scss"
-				dest: "dist/css"
+				dest: "<%= themeDist %>/css"
 				ext: ".css"
 
 		autoprefixer:
@@ -233,23 +251,23 @@ module.exports = (grunt) ->
 					"opera 12.1"
 				]
 			modern:
-				cwd: "dist/css"
+				cwd: "<%= themeDist %>/css"
 				src: [
 					"*.css"
 					"!ie8*.css"
 				]
-				dest: "dist/css"
+				dest: "<%= themeDist %>/css"
 				expand: true
 			oldIE:
 				options:
 					browsers: [
 						"ie 8"
 					]
-				cwd: "dist/css"
+				cwd: "<%= themeDist %>/css"
 				src: [
 					"ie8*.css"
 				]
-				dest: "dist/css"
+				dest: "<%= themeDist %>/css"
 				expand: true
 
 		usebanner:
@@ -257,24 +275,22 @@ module.exports = (grunt) ->
 				options:
 					banner: "@charset \"utf-8\";\n<%= banner %>"
 				files:
-					src: "dist/css/*.*"
+					src: "<%= themeDist %>/css/*.*"
 
 		cssmin:
 			theme:
 				expand: true
-				cwd: "dist/css/"
+				cwd: "<%= themeDist %>/css/"
 				src: "*.css"
 				ext: ".min.css"
-				dest: "dist/css"
+				dest: "<%= themeDist %>/css"
 
 		cssmin_ie8_clean:
 			min:
 				expand: true
-				cwd: "dist/css"
-				src: [
-					"**/ie8*.min.css"
-				]
-				dest: "dist/css"
+				cwd: "<%= themeDist %>/css"
+				src: "**/ie8*.min.css"
+				dest: "<%= themeDist %>/css"
 
 		jshint:
 			options:
@@ -297,9 +313,9 @@ module.exports = (grunt) ->
 				options:
 					banner: "<%= banner %>"
 				expand: true
-				cwd: "<%= copy.js.cwd %>"
-				src: "<%= copy.js.src %>"
-				dest: "dist/js/"
+				cwd: "<%= themeDist %>/"
+				src: "**/*.js"
+				dest: "<%= themeDist %>/"
 				ext: ".min.js"
 
 		i18n_csv:
@@ -333,7 +349,7 @@ module.exports = (grunt) ->
 				environment:
 					jqueryVersion: "<%= jqueryVersion.version %>"
 					jqueryOldIEVersion: "<%= jqueryOldIEVersion.version %>"
-				assets: "dist/"
+				assets: "dist/unmin"
 
 			theme:
 				options:
@@ -420,6 +436,7 @@ module.exports = (grunt) ->
 						"The value of attribute “title” on element “a” from namespace “http://www.w3.org/1999/xhtml” is not in Unicode Normalization Form C." #required for vietnamese translations
 						"Text run is not in Unicode Normalization Form C." #required for vietnamese translations
 						"The “longdesc” attribute on the “img” element is obsolete. Use a regular “a” element to link to the description."
+						/Bad value “\.\/\.\.\/[^”]*” for attribute “[^”]*” on XHTML element “[^”]*”: Path component contains a segment “\/\.\.\/” not at the beginning of a relative reference, or it contains a “\/\.\/”. These should be removed./
 					]
 				src: [
 					"dist/unmin/**/*.html"
