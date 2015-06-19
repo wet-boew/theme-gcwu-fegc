@@ -160,6 +160,7 @@ body {
 		@extend %search-controls-overrides;
 		@include linear-background ($screen-md-search-button-gradient-start, $screen-md-search-button-gradient-end);
 		line-height: 1;
+		min-height: 0;
 		padding: 2px 6px;
 	}
 }
