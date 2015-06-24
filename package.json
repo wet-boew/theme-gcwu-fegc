@@ -1,6 +1,6 @@
 {
   "name": "theme-gcwu-fegc",
-  "version": "4.0.15",
+  "version": "4.0.16-development",
   "scripts": {
     "test": "grunt",
     "postinstall": "bower update",
