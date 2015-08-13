@@ -58,8 +58,12 @@ header {
 		padding-top: 0;
 	}
 
-	[href]:after {
-		content: "";
+	a {
+		&[href] {
+			&:after {
+				content: "";
+			}
+		}
 	}
 }
 
