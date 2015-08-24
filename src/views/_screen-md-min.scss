@@ -40,8 +40,8 @@
 body {
 	background: {
 		image: url("../assets/header-leaf.jpg"), url("../assets/header-bg.jpg");
-		repeat: no-repeat, repeat-x;
 		position: center 2.7em;
+		repeat: no-repeat, repeat-x;
 	}
 
 	main {
@@ -124,8 +124,8 @@ body {
 #wb-sttl {
 	display: table-row;
 	margin: {
-		top: 5px;
 		bottom: 5px;
+		top: 5px;
 	}
 
 	a {
