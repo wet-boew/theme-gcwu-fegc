@@ -1,6 +1,6 @@
 {
   "name": "theme-gcwu-fegc",
-  "version": "4.0.17+1",
+  "version": "4.0.18-development",
   "license": "https://github.com/wet-boew/theme-gcwu-fegc/blob/master/License-en.txt",
   "ignore": [
     "**/.*",
@@ -12,7 +12,7 @@
     "lib"
   ],
   "devDependencies": {
-    "wet-boew": "https://github.com/wet-boew/wet-boew.git#4.0.17+1"
+    "wet-boew": "https://github.com/wet-boew/wet-boew.git#master"
   },
   "homepage": "https://github.com/wet-boew/theme-gcwu-fegc",
   "authors": [
