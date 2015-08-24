@@ -5,7 +5,7 @@ node_js:
 install:
   - npm -g install npm@next
   - script/setup
-  - gem install scss-lint --no-ri --version '=0.24.0'
+  - gem install scss_lint --no-ri --version '=0.41.0'
 
 script:
   - npm run-script travis_script

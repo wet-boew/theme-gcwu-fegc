@@ -18,3 +18,13 @@ linters:
     enabled: false
   NameFormat:
     enabled: false
+  UrlFormat:
+    enabled: false
+  ColorVariable:
+    enabled: false
+  IdSelector:
+    enabled: false
+  ImportantRule:
+    enabled: false
+  NestingDepth:
+    enabled: false
