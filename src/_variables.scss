@@ -38,9 +38,9 @@ $screen-md-footer-background-color: #efefef;
 $screen-md-notices-border-color: #999;
 $screen-md-canadaca-divider-color: #666;
 
-@mixin linear-background($start-color, $end-color, $reverse_default: 0) {
+@mixin linear-background($start-color, $end-color, $reverse-default: 0) {
 	background: {
-		@if $reverse_default == 1 {
+		@if $reverse-default == 1 {
 			color: $start-color;
 		} @else {
 			color: $end-color;
