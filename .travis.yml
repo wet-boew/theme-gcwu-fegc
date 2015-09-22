@@ -2,6 +2,8 @@ language: node_js
 node_js:
   - '0.12'
 
+sudo: false
+
 install:
   - script/setup
   - gem install scss_lint --no-ri --version '=0.41.0'
