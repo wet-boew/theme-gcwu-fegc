@@ -1,9 +1,8 @@
 language: node_js
 node_js:
-  - '0.10'
+  - '0.12'
 
 install:
-  - npm -g install npm@next
   - script/setup
   - gem install scss_lint --no-ri --version '=0.41.0'
 
