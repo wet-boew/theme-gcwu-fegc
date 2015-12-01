@@ -318,10 +318,12 @@ body {
 		}
 
 		> {
-			&:first-child {
+			li {
+				&:first-child {
 
-				a {
-					border-right: 0;
+					a {
+						border-right: 0;
+					}
 				}
 			}
 		}
