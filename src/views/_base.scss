@@ -8,9 +8,8 @@
   @title: All views
  */
 
-%no-breadcrumb-icon {
-	content: none;
-	padding: 0;
+%breadcrumb-no-icon {
+	display: none;
 }
 
 #wb-bc {
@@ -19,22 +18,18 @@
 	}
 
 	li {
-		&:before,
-		&:after {
+		&:before {
 			color: #333;
+			content: "\e092";
 			font: {
 				family: "Glyphicons Halflings";
 				size: 0.7em;
 			}
 		}
 
-		&:before {
-			content: "\e092";
-		}
-
 		&:first-child {
 			&:before {
-				@extend %no-breadcrumb-icon;
+				@extend %breadcrumb-no-icon;
 			}
 		}
 	}
@@ -44,17 +39,13 @@
 	#wb-bc {
 		li {
 			&:before {
-				@extend %no-breadcrumb-icon;
-			}
-
-			&:after {
 				content: "\e091";
-				padding: 0 5px;
+				display: inline-block;
 			}
 
 			&:first-child {
-				&:after {
-					@extend %no-breadcrumb-icon;
+				&:before {
+					@extend %breadcrumb-no-icon;
 				}
 			}
 		}
