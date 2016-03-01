@@ -52,17 +52,6 @@ header {
 	}
 }
 
-#wb-bc {
-	.breadcrumb {
-		margin-bottom: 0;
-		padding-top: 0;
-	}
-
-	[href]:after {
-		content: "";
-	}
-}
-
 h1 {
 	margin-top: 0;
 }
