@@ -21,7 +21,7 @@
 	margin-left: 15px;
 	margin-top: 4px;
 	position: absolute;
-	top: 0.3em;
+	top: .3em;
 }
 
 .wb-disable {
@@ -88,7 +88,7 @@
 	}
 }
 
-%small-view-under-color-fff {
+%small-view-under-color {
 	color: #fff;
 }
 
@@ -127,14 +127,14 @@
 	}
 
 	#wb-srch-sub-imprt {
-		@extend %small-view-under-color-fff;
+		@extend %small-view-under-color;
 		background: #146094;
 		border-color: #146094;
 
 		&:hover,
 		&:focus,
 		&:active {
-			@extend %small-view-under-color-fff;
+			@extend %small-view-under-color;
 			background-color: #3276b1;
 			border-color: #285e8e;
 		}
@@ -147,23 +147,19 @@
 		}
 	}
 
-	.sec-pnl {
-		@extend %small-view-under-bg-color-fff;
-	}
-
 	.sm-pnl {
 		background: #146094;
 
 		a {
-			@extend %small-view-under-color-fff;
+			@extend %small-view-under-color;
 		}
 
 		summary {
-			@extend %small-view-under-color-fff;
+			@extend %small-view-under-color;
 
 			&:hover,
 			&:focus {
-				@extend %small-view-under-color-fff;
+				@extend %small-view-under-color;
 			}
 		}
 	}
