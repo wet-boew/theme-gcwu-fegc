@@ -67,113 +67,6 @@
 	}
 }
 
-%submenu-colors {
-	background-color: $screen-md-submenu-background-color;
-	color: $screen-md-submenu-text-color;
-}
-
-%gcwu-theme-wb-sm-wb-navcurr {
-	background: #0f315b;
-	color: #fff;
-}
-
-#wb-sm {
-	margin-top: -1px;
-
-	.nvbar {
-		@include linear-background ($screen-md-menubar-gradient-start, $screen-md-menubar-gradient-end, 1);
-		border: {
-			bottom: 4px solid $screen-md-menubar-bottom-border-color;
-			top: 1px solid $screen-md-menubar-top-border-color;
-		}
-
-		ul {
-			&.menu {
-				margin-bottom: 0;
-
-				> {
-					li {
-						border-right: 1px solid $screen-md-menuitem-left-border-color;
-						padding: 0;
-
-						> {
-							a {
-								&.wb-navcurr {
-									@extend %gcwu-theme-wb-sm-wb-navcurr;
-								}
-
-								// :focus not needed since already covered by the &.active state
-								&:hover {
-									@extend %submenu-colors;
-								}
-							}
-						}
-
-						&.active {
-							border-right-color: $screen-md-menuitem-hover-border-color;
-						}
-					}
-				}
-			}
-		}
-	}
-
-	.active {
-		a,
-		summary {
-			@extend %submenu-colors;
-		}
-	}
-
-	a,
-	summary {
-		color: $screen-md-menubar-text-color;
-		display: block;
-		font-weight: 700;
-		padding: 0.48em 0.79em;
-		text-decoration: none;
-	}
-
-	.sm {
-		@extend %submenu-colors;
-		@extend %medium-view-navigation-links;
-		border: {
-			bottom: 4px solid $screen-md-submenu-bottom-border-color;
-			radius: 0 0 3px 3px;
-		}
-
-		a,
-		summary {
-			@extend %submenu-colors;
-			font-weight: 400;
-
-			// TODO: Implement %navigation-links when libsass gets better placeholder support
-			&:link {
-				text-decoration: none;
-			}
-
-			&.wb-navcurr {
-				@extend %gcwu-theme-wb-sm-wb-navcurr;
-			}
-
-			&:hover,
-			&:focus {
-				text-decoration: underline;
-			}
-		}
-
-		.slflnk {
-			a {
-				background: #bbb;
-
-				&.wb-navcurr {
-					@extend %gcwu-theme-wb-sm-wb-navcurr;
-				}
-			}
-		}
-	}
-}
-
 #wb-dtmd {
 	float: right;
 }
@@ -181,26 +74,6 @@
 #wb-info {
 	@include navigation-links;
 	background: $screen-md-footer-background-color url("../assets/sft-deco.gif") repeat-x scroll center top;
-
-	> {
-		.container {
-			background: transparent url("../assets/sft-deco-leaf.gif") no-repeat top center;
-
-			> {
-				:before {
-					@extend %page-background;
-					background: transparent;
-					content: " ";
-					display: block;
-					height: 25px;
-					margin: {
-						left: -15px;
-						right: -15px;
-					}
-				}
-			}
-		}
-	}
 
 	h2,
 	h3 {
@@ -211,7 +84,7 @@
 	}
 
 	li {
-		margin-bottom: 0.75em;
+		margin-bottom: .75em;
 	}
 }
 
