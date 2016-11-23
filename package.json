@@ -36,7 +36,7 @@
     "grunt-install-dependencies": "~0.2.0",
     "grunt-jscs-checker": "^0.4.2",
     "grunt-sass": "^1.0.0",
-    "grunt-wet-boew-postbuild": "wet-boew/grunt-wet-boew-postbuild#v0.1.2",
+    "grunt-wet-boew-postbuild": "^v0.1.6",
     "time-grunt": "^1.0.0"
   }
 }
