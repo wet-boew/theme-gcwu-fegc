@@ -4,6 +4,9 @@ node_js:
 
 sudo: false
 
+before_install:
+  - echo "machine github.com login $GH_TOKEN" >> ~/.netrc
+
 install:
   - script/setup
   - gem install scss_lint --no-ri --version '=0.41.0'

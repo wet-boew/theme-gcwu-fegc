@@ -512,7 +512,6 @@ module.exports = (grunt) ->
 					repo: process.env.DIST_REPO
 					branch: "<%= deployBranch %>"
 					message: "<%= distDeployMessage %>"
-					silent: true,
 					tag: ((
 						if process.env.TRAVIS_TAG then process.env.TRAVIS_TAG + "-" + "<%= pkg.name.toLowerCase() %>" else false
 					))
@@ -527,7 +526,6 @@ module.exports = (grunt) ->
 					clone: "themes-cdn"
 					base: "<%= themeDist %>"
 					message: "<%= cdnDeployMessage %>"
-					silent: true,
 					tag: ((
 						if process.env.TRAVIS_TAG then process.env.TRAVIS_TAG + "-" + "<%= pkg.name.toLowerCase() %>" else false
 					))
@@ -541,7 +539,6 @@ module.exports = (grunt) ->
 					repo: process.env.DEMOS_REPO
 					branch: process.env.DEMOS_BRANCH
 					message: "<%= distDeployMessage %>"
-					silent: true
 
 	require( "load-grunt-tasks" )( grunt )
 
