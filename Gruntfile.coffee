@@ -14,6 +14,7 @@ module.exports = (grunt) ->
 		"dist"
 		"Produces the production files"
 		[
+			"test"
 			"build"
 			"assets-dist"
 			"assemble"
@@ -121,6 +122,7 @@ module.exports = (grunt) ->
 		"test"
 		"INTERNAL: Runs testing tasks except for SauceLabs testing"
 		[
+			"sasslint"
 			"jshint"
 			"jscs"
 		]
@@ -258,6 +260,18 @@ module.exports = (grunt) ->
 							return content.replace /\.\.\/\.\.\/wet-boew\/(assets|fonts)/g, '../$1'
 						content
 
+		sasslint:
+			options:
+				configFile: ".sass-lint.yml"
+			all:
+				expand: true
+				src: [
+						"**/*.scss"
+						"!lib/**"
+						"!node_modules/**"
+						"!dist/**"
+					]
+
 		sass:
 			all:
 				expand: true
@@ -321,7 +335,7 @@ module.exports = (grunt) ->
 
 		jshint:
 			options:
-				jshintrc: "lib/wet-boew/.jshintrc"
+				jshintrc: ".jshintrc"
 
 			lib_test:
 				src: [
@@ -329,6 +343,10 @@ module.exports = (grunt) ->
 				]
 
 		jscs:
+			options:
+				preset: "jquery"
+				maximumLineLength: false
+				requireCapitalizedComments: false
 			all:
 				src: [
 					"src/**/*.js"

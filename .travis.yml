@@ -1,15 +1,15 @@
-language: node_js
-node_js:
-  - '6'
-
-sudo: false
+language: generic
+dist: trusty
+sudo: required
 
 before_install:
   - echo "machine github.com login $GH_TOKEN" >> ~/.netrc
+  - shopt -s expand_aliases
+  - source script/docker/activate
+  - npm --version
 
 install:
-  - script/setup
-  - gem install scss_lint --no-ri --version '=0.41.0'
+  - npm install --quiet
 
 script:
   - npm run-script travis_script
