@@ -335,7 +335,7 @@ module.exports = (grunt) ->
 
 		jshint:
 			options:
-				jshintrc: "lib/wet-boew/.jshintrc"
+				jshintrc: ".jshintrc"
 
 			lib_test:
 				src: [
@@ -343,6 +343,10 @@ module.exports = (grunt) ->
 				]
 
 		jscs:
+			options:
+				preset: "jquery"
+				maximumLineLength: false
+				requireCapitalizedComments: false
 			all:
 				src: [
 					"src/**/*.js"
