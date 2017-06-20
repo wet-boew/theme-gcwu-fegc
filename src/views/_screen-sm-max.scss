@@ -174,11 +174,6 @@
 	}
 }
 
-#wb-srch-sub {
-	float: right;
-	margin-left: 5px;
-}
-
 #wb-bc {
 	@include linear-background($screen-sm-breadcrumb-bar-gradient-start, $screen-sm-breadcrumb-bar-gradient-end);
 }
@@ -191,12 +186,6 @@
 	#wb-srch {
 		margin-left: 15px;
 		text-align: left;
-	}
-
-	#wb-srch-sub {
-		float: right;
-		margin-left: 5px;
-		margin-right: 0;
 	}
 
 	#mb-pnl {
