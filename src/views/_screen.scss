@@ -67,6 +67,11 @@
 	}
 }
 
+#wb-srch-sub {
+	float: right;
+	margin-left: 5px;
+}
+
 #wb-dtmd {
 	float: right;
 }
@@ -105,6 +110,14 @@
 }
 
 [dir=rtl] {
+	#wb-srch-sub {
+		float: left;
+		margin: {
+			left: 0;
+			right: 5px;
+		}
+	}
+
 	#wb-dtmd {
 		float: left;
 	}
