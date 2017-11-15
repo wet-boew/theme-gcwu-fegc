@@ -32,6 +32,7 @@ rules:
       -
           'extra-properties':
               - 'overflow-scrolling'
+              - 'image'
   no-url-protocols: 1
   no-trailing-whitespace: 2
   placeholder-name-format: 0
