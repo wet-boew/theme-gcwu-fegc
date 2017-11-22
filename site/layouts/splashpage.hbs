@@ -17,7 +17,7 @@
 	<body vocab="http://schema.org/" typeof="WebPage">
 		<header role="banner">
 			<div id="wb-bnr" class="container">
-				<object id="gcwu-sig" type="image/svg+xml" tabindex="-1" role="img" data="{{assets}}/../{{site.theme}}/assets/sig-alt-{{language}}.svg" aria-label="{{{i18n "tmpl-gc-sig"}}}"></object>
+				<object id="gcwu-sig" type="image/svg+xml" tabindex="-1" role="img" data="{{assets}}/../{{site.theme}}/assets/sig-alt-{{language}}.svg" aria-label="{{#is page.language "fr"}}{{{i18n "tmpl-gc-sig"}}} / {{{i18n "tmpl-gc-sig" language="en"}}}{{else}}{{{i18n "tmpl-gc-sig"}}} / {{{i18n "tmpl-gc-sig" language="fr"}}}{{/is}}"></object>
 			</div>
 		</header>
 		<main role="main" property="mainContentOfPage" class="container">
