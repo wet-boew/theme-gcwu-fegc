@@ -12,6 +12,10 @@
 	height: 1.5em;
 }
 
+%theme-base-screen-brightness-0-invert-100 {
+	filter: brightness(0) invert(100%);
+}
+
 %all-view-navigation-links {
 	@include navigation-links;
 }
@@ -48,11 +52,13 @@
 
 #gcwu-sig {
 	@extend %fip-height;
+	@extend %theme-base-screen-brightness-0-invert-100;
 	margin: 10px 0;
 }
 
 #wmms {
 	@extend %fip-height;
+	@extend %theme-base-screen-brightness-0-invert-100;
 }
 
 #wb-sttl {

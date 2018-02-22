@@ -3,7 +3,7 @@
 	"officiallanguage": "<%= language === 'en' || language === 'fr' %>"
 }
 ---
-<object id="gcwu-sig" type="image/svg+xml" tabindex="-1" role="img" data="{{assets}}/../{{site.theme}}/assets/sig-{{#is headerbar.officiallanguage "true"}}{{language}}{{else}}{{site.defaultLanguage}}{{/is}}.svg" aria-label="{{#is page.language "fr"}}{{{i18n "tmpl-gc-sig"}}} / {{{i18n "tmpl-gc-sig" language="en"}}}{{else}}{{{i18n "tmpl-gc-sig" language="en"}}} / {{{i18n "tmpl-gc-sig" language="fr"}}}{{/is}}"{{#isnt headerbar.officiallanguage "true"}} lang="{{{site.defaultLanguage}}}"{{/isnt}}></object>
+<img id="gcwu-sig" src="{{assets}}/../{{site.theme}}/assets/sig-{{#is headerbar.officiallanguage "true"}}{{language}}{{else}}{{site.defaultLanguage}}{{/is}}.svg" alt="{{#is page.language "fr"}}{{{i18n "tmpl-gc-sig"}}} / {{{i18n "tmpl-gc-sig" language="en"}}}{{else}}{{{i18n "tmpl-gc-sig" language="en"}}} / {{{i18n "tmpl-gc-sig" language="fr"}}}{{/is}}"{{#isnt headerbar.officiallanguage "true"}} lang="{{{site.defaultLanguage}}}"{{/isnt}} />
 <ul id="gc-bar" class="list-inline">
 {{#is headerbar.officiallanguage "true"}}
 	<li><a href="http://www.canada.ca/{{language}}/index.html" rel="external">Canada.ca</a></li>
