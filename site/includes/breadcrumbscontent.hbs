@@ -1,6 +1,12 @@
 <li>
 	<a href="{{site.wetSiteRoot}}/index-{{language}}.html">{{{i18n "tmpl-home"}}}</a>
 </li>
+
+{{#is breadcrumb2 "true"}}
+<li>
+	<a href="{{breadcrumb2-link}}">{{{breadcrumb2-title}}}</a>
+</li>
+{{else}}
 {{#contains page.src "/demos/index"}}
 {{else}}
 	{{#contains page.src "/docs/"}}
@@ -48,3 +54,4 @@
 	{{/contains}}
 {{/contains}}
 <li>{{title}}</li>
+{{/is}}
